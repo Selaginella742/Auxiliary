@@ -6,7 +6,6 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public GameObject father;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +23,7 @@ public class GunController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bulletPrefab, transform.position,father.transform.rotation);
+            Instantiate(bulletPrefab, transform.position,transform.rotation);
         }
     }
 }

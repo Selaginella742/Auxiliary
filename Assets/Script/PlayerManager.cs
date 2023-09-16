@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -19,7 +20,6 @@ public class PlayerManager : MonoBehaviour
         
     }
 
-
 }
 
 [System.Serializable]
@@ -30,4 +30,11 @@ public class Player
     public int defense;
     public float speed;
     public float dashCooldown;
+
+    //player's current weapons
+    public GameObject leftHandWeapon;
+    public GameObject rightHandWeapon;
+
+    // player's current passive item
+    public Item[] items;
 }
