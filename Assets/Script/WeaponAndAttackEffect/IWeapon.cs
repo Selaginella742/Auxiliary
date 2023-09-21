@@ -11,7 +11,10 @@ public abstract class IWeapon : MonoBehaviour
     [Tooltip("prefab for bullet type weapon, if some weapon need to instantiate a prefab, put it here, otherwise leave it empty")]
     public GameObject bulletPrefab;
 
+    [Header("Weapon Variables")]
+    [Min(0f)]
     public float weaponCooldown;
+
     public float weaponDamage;
     protected float currentCooldown;
 
@@ -42,10 +45,11 @@ public abstract class IWeapon : MonoBehaviour
     // Update is called once per frame
     protected virtual void FixedUpdate()
     {
+
        CalculateCooldown(Time.deltaTime);
        UpdateLocation();
 
-        attack();
+        Attack();
     }
 
     //update the attack loacation and direction
@@ -57,10 +61,11 @@ public abstract class IWeapon : MonoBehaviour
 
     public virtual void CalculateCooldown(float reduceAmount) 
     {
-        currentCooldown -= reduceAmount;
+        if (currentCooldown >= 0)
+            currentCooldown -= reduceAmount;
     }
 
-    protected virtual void attack()
+    protected virtual void Attack()
     {
         if (Input.GetMouseButton(handPos))
             if (currentCooldown <= 0)

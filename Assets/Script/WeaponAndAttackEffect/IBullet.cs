@@ -1,20 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Security.Cryptography;
-using System.Threading;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public abstract class IBullet : MonoBehaviour
 {
     public float speed;
     public float existTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float affectSpeed;
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -23,13 +17,13 @@ public class BulletController : MonoBehaviour
 
         existTime -= Time.deltaTime;
 
-        if (existTime <= 0) 
+        if (existTime <= 0)
         {
             Destroy(this.gameObject);
         }
     }
 
-    void bulletMovement(float speed) 
+    protected virtual void bulletMovement(float speed)
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }

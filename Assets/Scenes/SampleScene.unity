@@ -1094,9 +1094,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 0
-  bulletPrefab: {fileID: 2643681735645214943, guid: 5d5f01428acdad143a8d48ba02623743, type: 3}
+  bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   weaponCooldown: 2.7
   weaponDamage: 0
+  bulletCount: 3
+  shootingInterval: 0.2
 --- !u!1 &1274766926
 GameObject:
   m_ObjectHideFlags: 0
