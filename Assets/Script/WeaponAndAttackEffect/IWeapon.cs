@@ -16,15 +16,15 @@ public abstract class IWeapon : MonoBehaviour
     public float weaponCooldown;
 
     public float weaponDamage;
-    protected float currentCooldown;
 
+    protected float currentCooldown;
     protected Vector3 launchPos;
     protected Quaternion launchDir;
     protected int handPos; //determine right or left hand, right for 1 and left for 0
 
     protected void Awake() 
     {
-        if (transform.parent.parent.gameObject.name == "RightWeaponHolder")
+        if (transform.parent.parent.gameObject.name == "RightWeaponHolder")// check if the weapon is at left hand or right hand
             handPos = 1;
         else if (transform.parent.parent.gameObject.name == "LeftWeaponHolder")
             handPos = 0;
@@ -52,19 +52,27 @@ public abstract class IWeapon : MonoBehaviour
         Attack();
     }
 
-    //update the attack loacation and direction
+    /**
+     * update the attack loacation and direction
+     */
     protected virtual void UpdateLocation()
     {
         launchPos = transform.position;
         launchDir = transform.rotation;
     }
 
+    /**
+     * calculate the current cooldown of the weapon
+     */
     public virtual void CalculateCooldown(float reduceAmount) 
     {
         if (currentCooldown >= 0)
             currentCooldown -= reduceAmount;
     }
 
+    /**
+     * This method read the player's input and check if the weapon is ready to attack
+     */
     protected virtual void Attack()
     {
         if (Input.GetMouseButton(handPos))
@@ -75,6 +83,9 @@ public abstract class IWeapon : MonoBehaviour
             }
     }
 
+    /**
+     * The function of the weapon
+     */
     protected abstract void AttackMode();
 
 }

@@ -20,27 +20,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //PlayerMovementTranslate(5f);
         PlayerMovementController(moveSpeed);
     }
 
-    /**
-     * control player's movement using the transform component
-     * */
-    void PlayerMovementTranslate(float speed) 
-    {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(transform.forward * vertical * speed * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(transform.right * horizontal * speed *Time.deltaTime);
-        }
-    }
 
     /**
      * control the player's movement using the Character Controller component

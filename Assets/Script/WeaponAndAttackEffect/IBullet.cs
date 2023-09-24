@@ -8,6 +8,7 @@ public abstract class IBullet : MonoBehaviour
     public float existTime;
 
     public float affectSpeed;
+    public float impulse;
 
 
     // Update is called once per frame
