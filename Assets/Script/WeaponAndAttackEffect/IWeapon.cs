@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum WeaponType {bullet, ray, meele};
@@ -59,6 +60,18 @@ public abstract class IWeapon : MonoBehaviour
     {
         launchPos = transform.position;
         launchDir = transform.rotation;
+
+        //var dirRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit hit;
+
+        //if (Physics.Raycast(dirRay, out hit, Mathf.Infinity, 3))
+        //{
+        //    var deltaPos = hit.point - transform.position;
+        //    var angle = Mathf.Atan2(deltaPos.x, deltaPos.z) * Mathf.Rad2Deg;
+
+        //    Debug.Log(angle);
+        //    launchDir = Quaternion.Euler(0, angle, 0);
+        //}
     }
 
     /**

@@ -22,7 +22,7 @@ public class Repeater2Controller : IWeapon
     }
     protected override void AttackMode() 
     {
-        var repeaterIns = Instantiate(repeaterTrigger, transform);
+        var repeaterIns = Instantiate(repeaterTrigger,launchPos,launchDir,transform);
         var repeaterTrig = repeaterIns.GetComponent<RepeaterTrigger>();
 
         repeaterTrig.bullet = bulletPrefab;

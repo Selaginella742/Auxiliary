@@ -8,6 +8,7 @@ public abstract class IBullet : MonoBehaviour
     public float existTime;
 
     public float affectSpeed;
+    public float affectTime;
     public float impulse;
 
 
@@ -28,4 +29,6 @@ public abstract class IBullet : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+    protected abstract void effectOnCharacter();
 }

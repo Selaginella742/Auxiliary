@@ -11,7 +11,6 @@ public class RepeaterTrigger : MonoBehaviour
     [HideInInspector]
     public float timeBetween; // control the time between each shot
   
-    // Start is called before the first frame update
     void Start()
     {
         BulletShot();
