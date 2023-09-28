@@ -42,7 +42,7 @@ public class EnemyBulletController: MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            etargetStats.TakeDamage(characterStats, etargetStats);
+            etargetStats.TakeDamage(0, etargetStats);
             Destroy(gameObject);
         }
 
