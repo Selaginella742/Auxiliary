@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
+    public CharacterData_SO templateData;
+
     public CharacterData_SO characterData;
 
     public AttackData_SO attackData;
@@ -16,6 +18,13 @@ public class CharacterStats : MonoBehaviour
 
     #region All-character shared Read from Data_SO
     //These are all-character shared;
+
+    void Awake()
+    {
+        if (templateData != null)
+            characterData = Instantiate(templateData);
+    }
+
     public int MaxHelath 
     {
         get
@@ -144,7 +153,7 @@ public class CharacterStats : MonoBehaviour
 
     #endregion
 
-    private void Start()
+    void Start()
     {
         characterData.currentHealth = characterData.maxHealth;
         characterData.currentDashCool = characterData.baseDashCool;

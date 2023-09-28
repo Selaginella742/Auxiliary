@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
-public enum EnemyStates {GUARD,PATROL,CHASE,DEAD}
+public enum EnemyStates { GUARD, PATROL, CHASE, DEAD }
 [RequireComponent(typeof(NavMeshAgent))]
 
 
@@ -13,7 +14,7 @@ public class EnemyController : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    private Animator anim; //For enemy's animation
+    //private Animator anim; //For enemy's animation
 
     private Collider coll;
 
@@ -25,6 +26,8 @@ public class EnemyController : MonoBehaviour
     bool isChase;
     bool isFollow; //To determine if attack or continue chasing. Be careful when we make animation.
     bool isDeath;
+    public GameObject bulletPrefab;
+    public GameObject gunModel;
     public float lookAtTime; //The time enemy will wait in each patrol movement 
     private float remainLookAtTime;
     private float lastAttackTime;
@@ -46,7 +49,7 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         characterStats = GetComponent<CharacterStats>();
         speed = agent.speed;
         guardPos = transform.position;
@@ -71,19 +74,22 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         if (characterStats.CurrentHealth == 0)
+        {
             isDeath = true;
+        }
+
         SwitchStates();
-        SwitchAnimation();
+        //SwitchAnimation();
         lastAttackTime -= Time.deltaTime;// Enemy attack CD
-       
+
     }
 
     void SwitchAnimation()
     {
-        anim.SetBool("Walk", isWalk);
-        anim.SetBool("Chase", isChase);
-        anim.SetBool("Follow", isFollow);
-        anim.SetBool("Death", isDeath);
+        //anim.SetBool("Walk", isWalk);
+        //anim.SetBool("Chase", isChase);
+        //anim.SetBool("Follow", isFollow);
+        //anim.SetBool("Death", isDeath);
     }
 
     void SwitchStates()
@@ -100,11 +106,11 @@ public class EnemyController : MonoBehaviour
         }
 
 
-        switch (enemyStates)//change enemy status
+        switch (enemyStates)
         {
             case EnemyStates.GUARD:
                 isChase = false;
-                
+
 
                 if (transform.position != guardPos)
                 {
@@ -112,7 +118,7 @@ public class EnemyController : MonoBehaviour
                     agent.isStopped = false;
                     agent.destination = guardPos;
 
-                    if (Vector3.Distance(transform.position, guardPos)<=5f)
+                    if (Vector3.Distance(transform.position, guardPos) <= 5f)
                     {
                         isWalk = false;
                         transform.rotation = Quaternion.Lerp(transform.rotation, guardRotation, 0.01f);
@@ -125,7 +131,7 @@ public class EnemyController : MonoBehaviour
                 agent.speed = speed * 0.5f;
 
 
-                if(Vector3.Distance(wayPoint, transform.position) <= agent.stoppingDistance)
+                if (Vector3.Distance(wayPoint, transform.position) <= agent.stoppingDistance)
                 {
                     isWalk = false;
                     if (remainLookAtTime > 0) // Check if the time is 0
@@ -135,7 +141,7 @@ public class EnemyController : MonoBehaviour
                 }
                 else
                 {
-                    isWalk=true;
+                    isWalk = true;
                     agent.destination = wayPoint;
                 }
 
@@ -151,7 +157,7 @@ public class EnemyController : MonoBehaviour
                 agent.speed = speed;
                 if (!FoundPlayer())
                 {
-                   
+
                     isFollow = false;
                     if (remainLookAtTime > 0) //Back to last state
                     {
@@ -170,10 +176,10 @@ public class EnemyController : MonoBehaviour
                     agent.isStopped = false;
                     agent.destination = attackTarget.transform.position;
                 }
-                
-                if(TargetInAttackRange() || TargetInShootRange()) //Attack in their range
+
+                if (TargetInAttackRange() || TargetInShootRange()) //Attack in their range
                 {
-                    isFollow=false;
+                    isFollow = false;
                     agent.isStopped = true;
 
                     if (lastAttackTime < 0)
@@ -191,7 +197,7 @@ public class EnemyController : MonoBehaviour
                 coll.enabled = false;
                 agent.enabled = false;
 
-                Destroy(gameObject, 3f);
+                Destroy(gameObject, 1f);
                 break;
         }
     }
@@ -201,11 +207,12 @@ public class EnemyController : MonoBehaviour
         transform.LookAt(attackTarget.transform);
         if (TargetInAttackRange())
         {
-            anim.SetTrigger("Attack");//近战动画(打英文太累了)
+
         }
         if (TargetInShootRange())
         {
-            anim.SetTrigger("Shoot");//射击动画
+            Shoot();
+            //anim.SetTrigger("Shoot");//射击动画
         }
     }
 
@@ -229,8 +236,8 @@ public class EnemyController : MonoBehaviour
 
     bool TargetInAttackRange()
     {
-        if(attackTarget != null)
-            return Vector3.Distance(attackTarget.transform.position,transform.position)<= characterStats.attackData.attackRange;
+        if (attackTarget != null)
+            return Vector3.Distance(attackTarget.transform.position, transform.position) <= characterStats.attackData.attackRange;
         else
             return false;
     }
@@ -252,7 +259,12 @@ public class EnemyController : MonoBehaviour
 
         Vector3 randomPoint = new Vector3(guardPos.x + randomX, transform.position.y, guardPos.z + randomZ);
         NavMeshHit hit;
-        wayPoint = NavMesh.SamplePosition(randomPoint, out hit, patrolRange, 1) ? hit.position: transform.position ; // Scan obstacle in front of enemy.
+        wayPoint = NavMesh.SamplePosition(randomPoint, out hit, patrolRange, 1) ? hit.position : transform.position; // Scan obstacle in front of enemy.
+    }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, gunModel.transform.position, transform.rotation);
     }
 
 
