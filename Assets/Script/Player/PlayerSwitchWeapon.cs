@@ -5,17 +5,22 @@ using UnityEngine;
 
 public class PlayerSwitchWeapon : MonoBehaviour
 {
-    GameObject[] weapons;// the weapons in the weapon holder
-    int weaponIndex;
-
+    public WeaponList_SO weaponList;
     public CharacterData_SO playerData;
 
+    GameObject[] weapons; // the weapons in the weapon holder
+    int weaponIndex;
 
     void Start()
     {
-        weapons = new GameObject[transform.childCount]; // initialize the weapon list and put all weapons in the list
-        for (int i = 0; i < transform.childCount; i++)
-            weapons[i] = transform.GetChild(i).gameObject;
+        weapons = new GameObject[weaponList.weaponList.Count];
+        for (int i = 0; i < weaponList.weaponList.Count; i++)
+        {
+            GameObject weapon = Instantiate(weaponList.weaponList[i], transform); // create all weapons in the weaponlist
+            weapon.SetActive(false);
+            weapons[i] = weapon;
+            
+        }
 
         weapons[weaponIndex].SetActive(true);
     }

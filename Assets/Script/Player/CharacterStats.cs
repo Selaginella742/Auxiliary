@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class CharacterStats : MonoBehaviour
     public CharacterData_SO characterData;
 
     public AttackData_SO attackData;
+
+    public event Action<int, int> UpdateHealthBarOnTop;
 
     [HideInInspector] //Because it's not necessary to edit, I just want it work in other script :)
     public bool isCritical;
@@ -73,7 +76,7 @@ public class CharacterStats : MonoBehaviour
 
     #region Player-only shared Read from Data_SO
     //There are player only;
-    public int BaseSpeed
+    public float BaseSpeed
     {
         get
         {
@@ -87,7 +90,7 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public int CurrentSpeed
+    public float CurrentSpeed
     {
         get
         {
@@ -101,7 +104,7 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public int BaseDashCool
+    public float BaseDashCool
     {
         get
         {
@@ -115,7 +118,7 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public int CurrentDashCool
+    public float CurrentDashCool
     {
         get
         {
@@ -132,25 +135,21 @@ public class CharacterStats : MonoBehaviour
 
     #region Combat Calculate
 
-    public void TakeDamage(CharacterStats attacker, CharacterStats defencer)
+    public void TakeDamage(int hitDamage, CharacterStats defencer)
     {
-        int damage = Mathf.Max(attacker.CurrentDamage()-defencer.CurrentDefence, 0);
-
+        int damage = Mathf.Max(hitDamage-defencer.CurrentDefence, 0);
+        CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         //TODO: update UI and exp
-    }
-
-    private int CurrentDamage()
-    {
-        float coreDamage = UnityEngine.Random.Range(attackData.minDamage, attackData.maxDamage);
-
-        if (isCritical)
-        {
-            coreDamage *= attackData.criticalMultiplier;
-            Debug.Log("±©»÷£¡" + coreDamage);
-        }
-        return (int)coreDamage;
     }
 
     #endregion
 
+    private void Start()
+    {
+        characterData.currentHealth = characterData.maxHealth;
+        characterData.currentDashCool = characterData.baseDashCool;
+        characterData.currentDefence = characterData.baseDefence;
+        characterData.currentSpeed = characterData.baseSpeed;
+        characterData.currentDashSpeed = characterData.dashSpeed;
+    }
 }

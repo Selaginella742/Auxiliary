@@ -30,5 +30,13 @@ public abstract class IBullet : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
+    protected virtual void OnCollisionEnter(Collision coli) 
+    {
+        Destroy(this.gameObject);
+
+
+        if (coli.gameObject.tag == "Enemy")
+            effectOnCharacter();
+    }
     protected abstract void effectOnCharacter();
 }

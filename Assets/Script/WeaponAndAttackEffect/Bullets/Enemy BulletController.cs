@@ -5,15 +5,16 @@ using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class EnemyBulletController: MonoBehaviour
 {
     public float speed;
     public float existTime;
+    private CharacterStats characterStats;
 
-    // Start is called before the first frame update
-    void Start()
+    
+    void Awake()
     {
-        
+        characterStats = GetComponent<CharacterStats>();
     }
 
     // Update is called once per frame
@@ -33,4 +34,23 @@ public class BulletController : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        var etargetStats = other.GetComponent<CharacterStats>();
+        
+
+        if (other.CompareTag("Player"))
+        {
+            etargetStats.TakeDamage(characterStats, etargetStats);
+            Destroy(gameObject);
+        }
+
+        if (other.CompareTag("Building"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }

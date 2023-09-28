@@ -15,9 +15,12 @@ public abstract class IWeapon : MonoBehaviour
     [Header("Weapon Variables")]
     [Min(0f)]
     public float weaponCooldown;
+    public int weaponDamage;
+    public float criticalMultiplier;
+    public float criticalChance;
 
-    public float weaponDamage;
-
+    protected bool isCritical;
+    protected float currentDamage; //store the current damage after the buff of items or the character
     protected float currentCooldown;
     protected Vector3 launchPos;
     protected Quaternion launchDir;
@@ -61,17 +64,6 @@ public abstract class IWeapon : MonoBehaviour
         launchPos = transform.position;
         launchDir = transform.rotation;
 
-        //var dirRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //RaycastHit hit;
-
-        //if (Physics.Raycast(dirRay, out hit, Mathf.Infinity, 3))
-        //{
-        //    var deltaPos = hit.point - transform.position;
-        //    var angle = Mathf.Atan2(deltaPos.x, deltaPos.z) * Mathf.Rad2Deg;
-
-        //    Debug.Log(angle);
-        //    launchDir = Quaternion.Euler(0, angle, 0);
-        //}
     }
 
     /**
@@ -94,6 +86,21 @@ public abstract class IWeapon : MonoBehaviour
                 AttackMode();
                 currentCooldown = weaponCooldown;
             }
+    }
+
+    /**
+     * calculate the damage and if the current shot cause critical damage
+     */
+    protected int CurrentDamage()
+    {
+        float coreDamage = currentDamage;
+
+        if (isCritical)
+        {
+            coreDamage *= criticalMultiplier;
+            Debug.Log("±©»÷£¡" + coreDamage);
+        }
+        return (int)coreDamage;
     }
 
     /**
