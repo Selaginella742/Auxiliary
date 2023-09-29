@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum LaunchSource {enemy, player }
+
 public abstract class IBullet : MonoBehaviour
 {
     public float speed;
     public float existTime;
 
+    public LaunchSource launchSource;
+    public int affectDamage;
     public float affectSpeed;
     public float affectTime;
     public float impulse;
@@ -36,7 +40,7 @@ public abstract class IBullet : MonoBehaviour
 
 
         if (coli.gameObject.tag == "Enemy")
-            effectOnCharacter();
+            effectOnCharacter(coli);
     }
-    protected abstract void effectOnCharacter();
+    protected abstract void effectOnCharacter(Collision coli);
 }

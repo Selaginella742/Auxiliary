@@ -152,7 +152,9 @@ MonoBehaviour:
   weaponType: 0
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   weaponCooldown: 0.5
-  weaponDamage: 0
+  weaponDamage: 100
+  criticalMultiplier: 0
+  criticalChance: 0
 --- !u!1 &8452419530997283076
 GameObject:
   m_ObjectHideFlags: 0

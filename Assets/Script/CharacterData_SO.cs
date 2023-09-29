@@ -14,15 +14,11 @@ public class CharacterData_SO : ScriptableObject
     public float baseDashCool;
     public float dashSpeed;
 
-    [HideInInspector]
+    [Header("Realtime data")]
     public int currentHealth;
-    [HideInInspector]
     public int currentDefence;
-    [HideInInspector]
     public float currentSpeed;
-    [HideInInspector]
     public float currentDashCool;
-    [HideInInspector]
     public float currentDashSpeed;
 
     [Header("Weapon System")]

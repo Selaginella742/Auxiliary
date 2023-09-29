@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c9d12cba6ae834a92ca0dca2eea909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  templateData: {fileID: 0}
   characterData: {fileID: 11400000, guid: b18c613dd8e910f4899b6d7c8e15e16b, type: 2}
   attackData: {fileID: 0}
   isCritical: 0
@@ -270,8 +271,8 @@ GameObject:
   - component: {fileID: 174677902}
   - component: {fileID: 174677901}
   m_Layer: 0
-  m_Name: Cube (4)
-  m_TagString: Untagged
+  m_Name: EnemyCube4
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,8 +377,8 @@ GameObject:
   - component: {fileID: 367883752}
   - component: {fileID: 367883756}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: EnemyCube1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -480,7 +481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c9d12cba6ae834a92ca0dca2eea909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 0}
+  templateData: {fileID: 0}
+  characterData: {fileID: 11400000, guid: b8b596f7d18b2174f9236d08681e94fb, type: 2}
   attackData: {fileID: 0}
   isCritical: 0
 --- !u!1 &447454019
@@ -636,8 +638,8 @@ GameObject:
   - component: {fileID: 758547648}
   - component: {fileID: 758547647}
   m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: Untagged
+  m_Name: EnemyCube2
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,8 +946,8 @@ GameObject:
   - component: {fileID: 848315867}
   - component: {fileID: 848315866}
   m_Layer: 0
-  m_Name: Cube (3)
-  m_TagString: Untagged
+  m_Name: EnemyCube3
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

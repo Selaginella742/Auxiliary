@@ -28,5 +28,6 @@ public class Repeater2Controller : IWeapon
         repeaterTrig.bullet = bulletPrefab;
         repeaterTrig.timeBetween = timeBetweenShot;
         repeaterTrig.shootIndex = bulletAmount;
+        repeaterTrig.currentDamage = CurrentDamage(buffedDamage);
     }
 }

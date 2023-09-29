@@ -20,7 +20,7 @@ public abstract class IWeapon : MonoBehaviour
     public float criticalChance;
 
     protected bool isCritical;
-    protected float currentDamage; //store the current damage after the buff of items or the character
+    protected float buffedDamage; //store the current damage after the buff of items or the character
     protected float currentCooldown;
     protected Vector3 launchPos;
     protected Quaternion launchDir;
@@ -35,22 +35,17 @@ public abstract class IWeapon : MonoBehaviour
         else
             handPos = 2;
     }
-
-    // Start is called before the first frame update
     protected virtual void Start()
     {
         currentCooldown = 0;
         launchPos = transform.position;
         launchDir = transform.rotation;
-
-        //Debug.Log("handPos: " + handPos);
     }
-
-    // Update is called once per frame
     protected virtual void FixedUpdate()
     {
 
        CalculateCooldown(Time.deltaTime);
+       UpdateDamage();
        UpdateLocation();
 
         Attack();
@@ -88,12 +83,17 @@ public abstract class IWeapon : MonoBehaviour
             }
     }
 
+    protected virtual void UpdateDamage() 
+    {
+        buffedDamage = weaponDamage;
+    }
+
     /**
      * calculate the damage and if the current shot cause critical damage
      */
-    protected int CurrentDamage()
+    protected int CurrentDamage(float inputDamage)
     {
-        float coreDamage = currentDamage;
+        float coreDamage = inputDamage;
 
         if (isCritical)
         {

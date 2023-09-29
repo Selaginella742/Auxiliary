@@ -10,6 +10,8 @@ public class RepeaterTrigger : MonoBehaviour
     public int shootIndex; // control how many bullets are shot in one turn
     [HideInInspector]
     public float timeBetween; // control the time between each shot
+    [HideInInspector]
+    public int currentDamage;
   
     void Start()
     {
@@ -24,6 +26,7 @@ public class RepeaterTrigger : MonoBehaviour
         if (shootIndex > 0)
         {
             Instantiate(bullet, transform.position, transform.rotation);
+            bullet.GetComponent<IBullet>().affectDamage = currentDamage;
             shootIndex--;
 
             Invoke("BulletShot", timeBetween);
