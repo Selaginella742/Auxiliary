@@ -149,6 +149,7 @@ public class CharacterStats : MonoBehaviour
         int damage = Mathf.Max(hitDamage-defencer.CurrentDefence, 0);
         CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         //TODO: update UI and exp
+        UpdateHealthBarOnTop?.Invoke(CurrentHealth, MaxHelath);
     }
 
     #endregion
