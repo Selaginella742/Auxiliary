@@ -13,13 +13,8 @@ public abstract class IWeapon : MonoBehaviour
     public GameObject bulletPrefab;
 
     [Header("Weapon Variables")]
-    [Min(0f)]
-    public float weaponCooldown;
-    public int weaponDamage;
-    public float criticalMultiplier;
-    public float criticalChance;
+    public WeaponData damageData;
 
-    protected bool isCritical;
     protected float buffedDamage; //store the current damage after the buff of items or the character
     protected float currentCooldown;
     protected Vector3 launchPos;
@@ -37,7 +32,7 @@ public abstract class IWeapon : MonoBehaviour
     }
     protected virtual void Start()
     {
-        currentCooldown = 0;
+        currentCooldown = damageData.buffedCooldown;
         launchPos = transform.position;
         launchDir = transform.rotation;
     }
@@ -47,6 +42,7 @@ public abstract class IWeapon : MonoBehaviour
        CalculateCooldown(Time.deltaTime);
        UpdateDamage();
        UpdateLocation();
+       damageData.UpdateData();
 
         Attack();
     }
@@ -79,28 +75,13 @@ public abstract class IWeapon : MonoBehaviour
             if (currentCooldown <= 0)
             {
                 AttackMode();
-                currentCooldown = weaponCooldown;
+                currentCooldown = damageData.buffedCooldown;
             }
     }
 
     protected virtual void UpdateDamage() 
     {
-        buffedDamage = weaponDamage;
-    }
-
-    /**
-     * calculate the damage and if the current shot cause critical damage
-     */
-    protected int CurrentDamage(float inputDamage)
-    {
-        float coreDamage = inputDamage;
-
-        if (isCritical)
-        {
-            coreDamage *= criticalMultiplier;
-            Debug.Log("±©»÷£¡" + coreDamage);
-        }
-        return (int)coreDamage;
+        buffedDamage = damageData.damage;
     }
 
     /**
@@ -108,4 +89,80 @@ public abstract class IWeapon : MonoBehaviour
      */
     protected abstract void AttackMode();
 
+}
+
+/**
+ * This class represent the damage datas of the weapon
+ */
+[System.Serializable]
+public class WeaponData
+{
+    
+    [Header("Damage Variables")]
+    [Min(0f)]
+    [SerializeField] public float coolDown;
+    public int damage;
+    public float criticalMultiplier;
+    public float criticalChance;
+
+   
+
+    [Header("Player Buffs Data")]
+    [Tooltip("put player attack data here to calculate the buffed weapon data")]
+    public AttackData_SO playerBuff;
+
+    [Header("Monitoring weapon data")]
+    [ReadOnly] public float buffedCooldown;
+    [ReadOnly] public int buffedDamage;
+    [ReadOnly] public bool isCritical;
+    [ReadOnly] public float buffedCriticalChance;
+    [ReadOnly] public float buffedCriticalMulti;
+
+    /**
+     * This method update the weapon's damage data after the player get some damage buffs
+     */
+    public void UpdateData()
+    {
+        if (playerBuff != null)
+        {
+            buffedCooldown = playerBuff.coolDown + coolDown;
+            buffedDamage = playerBuff.damage + damage;
+            buffedCriticalChance = playerBuff.criticalChance + criticalChance;
+            buffedCriticalMulti = playerBuff.criticalMultiplier + criticalMultiplier;
+        }
+        else
+        {
+            buffedCooldown = coolDown;
+            buffedDamage = damage;
+            buffedCriticalChance = criticalChance;
+            buffedCriticalMulti = criticalMultiplier;
+        }
+    }
+    /**
+     * This method calculate weapon's critical shot damage
+     */
+    public int CurrentDamage()
+    {
+        float coreDamage = buffedDamage;
+
+        if (isCritical)
+        {
+            coreDamage *= buffedCriticalMulti;
+            Debug.Log("±©»÷£¡" + coreDamage);
+        }
+        return (int)coreDamage;
+    }
+
+    /**
+     * This method determine if the weapon get a critical shot
+     */
+    public bool CheckCritical()
+    {
+        float critialLimit = Random.value;
+
+        if (critialLimit <= buffedCriticalChance)
+            return true;
+
+        return false;
+    }
 }

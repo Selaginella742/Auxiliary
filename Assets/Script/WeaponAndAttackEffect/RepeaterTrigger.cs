@@ -11,7 +11,7 @@ public class RepeaterTrigger : MonoBehaviour
     [HideInInspector]
     public float timeBetween; // control the time between each shot
     [HideInInspector]
-    public int currentDamage;
+    public WeaponData repeaterData;
   
     void Start()
     {
@@ -25,8 +25,10 @@ public class RepeaterTrigger : MonoBehaviour
     {
         if (shootIndex > 0)
         {
-            Instantiate(bullet, transform.position, transform.rotation);
-            bullet.GetComponent<IBullet>().affectDamage = currentDamage;
+            GameObject shot = Instantiate(bullet, transform.position, transform.rotation);
+            IBullet shotData = shot.GetComponent<IBullet>();
+            shotData.affectDamage = repeaterData.buffedDamage;
+            shotData.launchSource = LaunchSource.player;
             shootIndex--;
 
             Invoke("BulletShot", timeBetween);

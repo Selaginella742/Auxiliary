@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum LaunchSource {enemy, player }
+public enum LaunchSource {none, enemy, player}
 
 public abstract class IBullet : MonoBehaviour
 {
     public float speed;
     public float existTime;
 
-    public LaunchSource launchSource;
-    public int affectDamage;
-    public float affectSpeed;
-    public float affectTime;
-    public float impulse;
+    [Header("Monitoring Realtime Bullet Data")]
+    [ReadOnly] public LaunchSource launchSource;
+    [ReadOnly] public int affectDamage;
+    [ReadOnly] public float affectSpeed;
+    [ReadOnly] public float affectTime;
+    [ReadOnly] public float impulse;
 
 
     // Update is called once per frame
@@ -39,7 +40,9 @@ public abstract class IBullet : MonoBehaviour
         Destroy(this.gameObject);
 
 
-        if (coli.gameObject.tag == "Enemy")
+        if (coli.gameObject.tag == "Enemy" && launchSource == LaunchSource.player)
+            effectOnCharacter(coli);
+        else if(coli.gameObject.tag == "Player" && launchSource == LaunchSource.enemy)
             effectOnCharacter(coli);
     }
     protected abstract void effectOnCharacter(Collision coli);

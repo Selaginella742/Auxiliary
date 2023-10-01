@@ -12,13 +12,13 @@ public class AttackData_SO : ScriptableObject
     public float criticalMultiplier;
     public float criticalChance;
 
-    private bool isCritical;
+    protected bool isCritical;
 
     [Header("Enemy Data")]
     public float attackRange;
     public float shootRange;
 
-    public int CurrentDamage()
+    public virtual int CurrentDamage()
     {
         float coreDamage = damage;
 
@@ -28,5 +28,15 @@ public class AttackData_SO : ScriptableObject
             Debug.Log("±©»÷£¡" + coreDamage);
         }
         return (int)coreDamage;
+    }
+
+    public virtual bool CheckCritical()
+    {
+        float critialLimit = Random.value;
+
+        if (critialLimit <= criticalChance)
+            return true;
+
+        return false;
     }
 }

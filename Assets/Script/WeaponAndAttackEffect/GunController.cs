@@ -9,9 +9,10 @@ public class GunController : IWeapon
 
     protected override void AttackMode() 
     {
-        GameObject bullet = Instantiate(bulletPrefab, launchPos, launchDir);
-        IBullet bulletEffect = bullet.GetComponent<IBullet>();
+        GameObject shot = Instantiate(bulletPrefab, launchPos, launchDir);
+        IBullet shotData = shot.GetComponent<IBullet>();
 
-        bulletEffect.affectDamage = CurrentDamage(buffedDamage);
+        shotData.affectDamage = damageData.CurrentDamage();
+        shotData.launchSource = LaunchSource.player;
     }
 }

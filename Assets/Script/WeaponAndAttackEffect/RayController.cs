@@ -19,7 +19,7 @@ public class RayController : IWeapon
             {
                 line.SetActive(true);
                 AttackMode();
-                currentCooldown = weaponCooldown;
+                currentCooldown = damageData.buffedCooldown;
                 //Debug.Log(line.GetComponent<LineRenderer>().GetPosition(1));
             }
         }

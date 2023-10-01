@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -264,7 +263,14 @@ public class EnemyController : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, gunModel.transform.position, transform.rotation);
+        GameObject shot = Instantiate(bulletPrefab, gunModel.transform.position, transform.rotation);
+        var shotData = shot.GetComponent<IBullet>();
+
+        if (shotData != null)
+        {
+            shotData.launchSource = LaunchSource.enemy;
+            shotData.affectDamage = characterStats.attackData.damage;
+        }
     }
 
 
