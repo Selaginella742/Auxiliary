@@ -11,6 +11,8 @@ public abstract class IWeapon : MonoBehaviour
 
     [Tooltip("prefab for bullet type weapon, if some weapon need to instantiate a prefab, put it here, otherwise leave it empty")]
     public GameObject bulletPrefab;
+    public AudioClip shootSound;
+    public GameObject shootEffect;
 
     [Header("Weapon Variables")]
     public WeaponData damageData;
