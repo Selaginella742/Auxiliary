@@ -59,6 +59,13 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
                 currentHolder.UpdateItem();
                 targetHolder.UpdateItem();
             }
+
+        }
+
+        else
+        {
+            Debug.Log("Item Dragged Outside of Inventory");
+            Destroy(gameObject);
         }
         transform.SetParent(InventoryManager.Instance.currentDrag.originalParent);
 
