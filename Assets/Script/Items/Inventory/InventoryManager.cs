@@ -26,6 +26,11 @@ public class InventoryManager : Singleton<InventoryManager>
 
     public DragData currentDrag;
 
+    [Header("Tooltip")]
+
+    public GameObject tooltip;
+
+
     void Start()
     {
         inventoryUI.RefreshUI();
@@ -44,6 +49,7 @@ public class InventoryManager : Singleton<InventoryManager>
         }
         return false;
     }
+
 
 
     
