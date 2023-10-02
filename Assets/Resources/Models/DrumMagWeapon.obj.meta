@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 50af9f67e01175846a8bbdca7d5c1cde
+guid: e1a8778f736487e4d878c58aefdc71cd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,38 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: polySurface27Mat
-    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: polySurface32Mat
-    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: polySurface37Mat
-    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: polySurface40Mat
-    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: polySurface41Mat
-    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: polySurface42Mat
-    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: polySurface45Mat
-    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
+      name: weapon1_pCylinder15Mat
+    second: {fileID: 2100000, guid: c9cfccceb76be874ea17cdb50e626c23, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
