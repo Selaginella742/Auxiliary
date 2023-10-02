@@ -193,10 +193,16 @@ public class EnemyController : MonoBehaviour
                 break;
             case EnemyStates.DEAD:
 
+                if (GetComponent<LoopSpawner>() && isDeath && !GetComponent<LoopSpawner>().isDone)
+                {
+                    GetComponent<LoopSpawner>().SpawnLoot();
+                    GetComponent<LoopSpawner>().isDone = true;
+                }
+
                 coll.enabled = false;
                 agent.enabled = false;
 
-                Destroy(gameObject, 1f);
+                Destroy(gameObject, 0.5f);
                 break;
         }
     }

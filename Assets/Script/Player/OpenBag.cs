@@ -14,7 +14,7 @@ public class OpenBag : MonoBehaviour
 
     void OpenTheBag()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (!myBag.activeSelf)
             {
