@@ -321,7 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6203721893390192434}
   - component: {fileID: 8196125359937778177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,6 +366,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8734128787231228811}
     m_Modifications:
+    - target: {fileID: -9188541255742811839, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -406,9 +410,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5390689351210449407, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
       propertyPath: m_Name
       value: BottomHalfMecha
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075306870285647189, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1148539174630159290, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894615377530851186, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723318972315858231, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6620738388340332227, guid: acd900443cecbbf49859d1ee286e39a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -428,6 +460,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6203721893390192434}
     m_Modifications:
+    - target: {fileID: -9104405315276480835, guid: 0c2324483f2c8f74c853eec424cde292, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c2324483f2c8f74c853eec424cde292, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -471,6 +507,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0c2324483f2c8f74c853eec424cde292, type: 3}
       propertyPath: m_Name
       value: TopHalfMecha
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c2324483f2c8f74c853eec424cde292, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
