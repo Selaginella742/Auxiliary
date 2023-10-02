@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8bc7022368787ca4ab06c7353f1e0107
+guid: acd900443cecbbf49859d1ee286e39a1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: pCube35Mat
-    second: {fileID: 2100000, guid: 22e61c6543f48634f9ce312017fc3242, type: 2}
+      name: polySurface27Mat
+    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface32Mat
+    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface37Mat
+    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface40Mat
+    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface41Mat
+    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface42Mat
+    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface45Mat
+    second: {fileID: 2100000, guid: 21c7dbaa25298d94d8dfcb7e7b582c83, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
