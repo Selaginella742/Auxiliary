@@ -14,32 +14,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0
   - ItemData: {fileID: 0}
+    amount: 0

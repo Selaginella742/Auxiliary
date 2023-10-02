@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealthUI : MonoBehaviour
@@ -18,6 +19,8 @@ public class PlayerHealthUI : MonoBehaviour
     void Update()
     {
         UpdateHealth();
+        if (characterStats.characterData.currentHealth <= 0)
+            SceneManager.LoadScene("Menu");
     }
 
     void UpdateHealth()

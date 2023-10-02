@@ -12,6 +12,10 @@ public class ItemData_SO : ScriptableObject
 
     public Sprite itemIcon;
 
+    public int itemAmount;
+
+    public bool stackable;
+
     [TextArea]
     public string description = "";
 }

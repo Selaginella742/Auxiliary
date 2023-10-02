@@ -11,7 +11,7 @@ public class ItemPickUp : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //TODO:put item into inventory
-            InventoryManager.Instance.inventoryData.AddItem(itemData);
+            InventoryManager.Instance.inventoryData.AddItem(itemData,itemData.itemAmount);
             InventoryManager.Instance.inventoryUI.RefreshUI();
 
             Destroy(gameObject);
