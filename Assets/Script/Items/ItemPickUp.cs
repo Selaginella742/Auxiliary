@@ -14,7 +14,18 @@ public class ItemPickUp : MonoBehaviour
             InventoryManager.Instance.inventoryData.AddItem(itemData,itemData.itemAmount);
             InventoryManager.Instance.inventoryUI.RefreshUI();
 
+            ItemAffectOnPlayer();
             Destroy(gameObject);
         }    
+    }
+
+    void ItemAffectOnPlayer()
+    {
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.maxHealth += itemData.itemHealth;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentHealth += itemData.itemHealth;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDefence += itemData.itemDefence;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentSpeed += itemData.itemSpeed;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDashSpeed += itemData.itemDashSpeed;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDashCool -= itemData.itemDashCool;
     }
 }

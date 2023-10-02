@@ -65,6 +65,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         else
         {
             Debug.Log("Item Dragged Outside of Inventory");
+            
+            DragOutItem();
             currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount = 0;
             currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData = null;
             currentHolder.itemUI.SetupItemUI(null, 0);
@@ -84,5 +86,16 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index] = targetItem;
         targetHolder.itemUI.Bag.items[targetHolder.itemUI.Index] = tempItem;
+    }
+
+    void DragOutItem()
+    {
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.maxHealth -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemHealth * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
+        if (GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentHealth > GameObject.Find("Player").GetComponent<CharacterStats>().characterData.maxHealth)
+            GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentHealth = GameObject.Find("Player").GetComponent<CharacterStats>().characterData.maxHealth;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDefence -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemDefence * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentSpeed -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemSpeed * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDashSpeed -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemDashSpeed * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
+        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDashCool += currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemDashCool * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
     }
 }

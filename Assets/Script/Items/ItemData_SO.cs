@@ -18,4 +18,16 @@ public class ItemData_SO : ScriptableObject
 
     [TextArea]
     public string description = "";
+
+    [Header("Item Data Affect On Player")]
+
+    public int itemHealth;
+
+    public int itemDefence;
+
+    public float itemSpeed;
+
+    public float itemDashCool;
+
+    public float itemDashSpeed;
 }

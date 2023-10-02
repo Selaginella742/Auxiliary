@@ -21,3 +21,8 @@ MonoBehaviour:
 
     It will increase 100 maxhealth
     and damage.'
+  itemHealth: 10
+  itemDefence: 0
+  itemSpeed: 5
+  itemDashCool: 0
+  itemDashSpeed: 0
