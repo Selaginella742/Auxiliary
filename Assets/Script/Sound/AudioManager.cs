@@ -29,10 +29,7 @@ public class AudioManager : MonoBehaviour
         }
         
     }
-    void Start ()
-    { 
-        Play("MenuMusic");
-    }
+    
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, sounds => sounds.name == name);

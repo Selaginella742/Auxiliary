@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class AdvanceToGame : MonoBehaviour
 {
-   
-    public void Play ()
+    void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("MenuMusic");
+    }
+
+    public void HitPlay ()
     {
         FindObjectOfType<AudioManager>().StopPlaying("MenuMusic");
         //FindObjectOfType<AudioManager>().Play("GameIntro");
