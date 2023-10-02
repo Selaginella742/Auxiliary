@@ -17,7 +17,6 @@ public abstract class IWeapon : MonoBehaviour
     [Header("Weapon Variables")]
     public WeaponData damageData;
 
-    public float buffedDamage; //store the current damage after the buff of items or the character
     protected float currentCooldown;
     protected Vector3 launchPos;
     protected Quaternion launchDir;
@@ -42,7 +41,7 @@ public abstract class IWeapon : MonoBehaviour
     {
 
        CalculateCooldown(Time.deltaTime);
-       UpdateDamage();
+
        UpdateLocation();
        damageData.UpdateData();
 
@@ -79,11 +78,6 @@ public abstract class IWeapon : MonoBehaviour
                 AttackMode();
                 currentCooldown = damageData.buffedCooldown;
             }
-    }
-
-    protected virtual void UpdateDamage() 
-    {
-        buffedDamage = damageData.damage;
     }
 
     /**
