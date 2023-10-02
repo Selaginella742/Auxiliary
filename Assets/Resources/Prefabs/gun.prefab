@@ -152,6 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 0
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
+  shootSound: {fileID: 0}
+  shootEffect: {fileID: 0}
   damageData:
     coolDown: 0.5
     damage: 25
