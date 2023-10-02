@@ -17,7 +17,7 @@ public abstract class IWeapon : MonoBehaviour
     [Header("Weapon Variables")]
     public WeaponData damageData;
 
-    protected float buffedDamage; //store the current damage after the buff of items or the character
+    public float buffedDamage; //store the current damage after the buff of items or the character
     protected float currentCooldown;
     protected Vector3 launchPos;
     protected Quaternion launchDir;
