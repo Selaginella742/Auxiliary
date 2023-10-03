@@ -17,7 +17,7 @@ MonoBehaviour:
   baseSpeed: 0
   baseDashCool: 0
   dashSpeed: 0
-  currentHealth: 0
+  currentHealth: 200
   currentDefence: 0
   currentSpeed: 0
   currentDashCool: 0
