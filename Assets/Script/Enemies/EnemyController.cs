@@ -201,7 +201,7 @@ public class EnemyController : MonoBehaviour
 
                 coll.enabled = false;
                 agent.enabled = false;
-
+                FindObjectOfType<AudioManager>().Play("EnemyDeath");
                 Destroy(gameObject, 0.5f);
                 break;
         }
