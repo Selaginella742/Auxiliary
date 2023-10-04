@@ -10,11 +10,6 @@ public abstract class IWeapon : MonoBehaviour
 {
     public WeaponType weaponType;
 
-    [Tooltip("prefab for bullet type weapon, if some weapon need to instantiate a prefab, put it here, otherwise leave it empty")]
-    public GameObject bulletPrefab;
-    public AudioClip shootSound;
-    public GameObject shootEffect;
-
     [Header("Weapon Variables")]
     public WeaponData damageData;
 
@@ -39,7 +34,7 @@ public abstract class IWeapon : MonoBehaviour
         launchPos = transform.position;
         launchDir = transform.rotation;
 
-        effectIns = Instantiate(shootEffect, launchPos, launchDir, transform);
+        effectIns = Instantiate(damageData.shootEffect, launchPos, launchDir, transform);
         effectIns.SetActive(false);
 
     }
@@ -84,9 +79,6 @@ public abstract class IWeapon : MonoBehaviour
         if (Input.GetMouseButton(handPos))
             if (currentCooldown <= 0)
             {
-                if (shootSound != null)
-                    AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, 5f);
-
                 AttackMode();
                 currentCooldown = damageData.buffedCooldown;
                 //MuzzleFlash();
@@ -126,7 +118,12 @@ public abstract class IWeapon : MonoBehaviour
 [System.Serializable]
 public class WeaponData
 {
-    
+
+    [Tooltip("prefab for bullet type weapon, if some weapon need to instantiate a prefab, put it here, otherwise leave it empty")]
+    public GameObject bulletPrefab;
+    public AudioClip shootSound;
+    public GameObject shootEffect;
+
     [Header("Damage Variables")]
     [Min(0f)]
     public float coolDown;

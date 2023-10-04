@@ -28,7 +28,6 @@ public class Repeater2Controller : IWeapon
     {
         var repeaterTrig = triggerIns.GetComponent<RepeaterTrigger>();
 
-        repeaterTrig.bullet = bulletPrefab;
         repeaterTrig.timeBetween = timeBetweenShot;
         repeaterTrig.shootIndex = bulletAmount;
         repeaterTrig.repeaterData = damageData;

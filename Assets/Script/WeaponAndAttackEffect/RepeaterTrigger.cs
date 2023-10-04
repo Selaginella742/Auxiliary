@@ -25,9 +25,12 @@ public class RepeaterTrigger : MonoBehaviour
     {
         if (shootIndex > 0)
         {
-            GameObject shot = Instantiate(bullet, transform.position, transform.rotation);
+            if (repeaterData.shootSound != null)
+                AudioSource.PlayClipAtPoint(repeaterData.shootSound, Camera.main.transform.position, 5f);
+
+            GameObject shot = Instantiate(repeaterData.bulletPrefab, transform.position, transform.rotation);
             IBullet shotData = shot.GetComponent<IBullet>();
-            shotData.affectDamage = repeaterData.buffedDamage;
+            shotData.affectDamage = repeaterData.CurrentDamage();
             shotData.launchSource = LaunchSource.player;
             shootIndex--;
 
