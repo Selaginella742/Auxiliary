@@ -12,7 +12,10 @@ public class GunController : IWeapon
     protected override void AttackMode() 
     {
         if (damageData.shootSound != null)
-            AudioSource.PlayClipAtPoint(damageData.shootSound, Camera.main.transform.position, 5f);
+            AudioSource.PlayClipAtPoint(damageData.shootSound, Camera.main.transform.position, 0.5f);
+
+        if (effectIns != null)
+            MuzzleFlash();
 
         GameObject shot = Instantiate(damageData.bulletPrefab, launchPos, launchDir);
         IBullet shotData = shot.GetComponent<IBullet>();

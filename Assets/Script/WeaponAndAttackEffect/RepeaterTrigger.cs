@@ -12,7 +12,9 @@ public class RepeaterTrigger : MonoBehaviour
     public float timeBetween; // control the time between each shot
     [HideInInspector]
     public WeaponData repeaterData;
-  
+    [HideInInspector]
+    public IWeapon repeater;
+
     void OnEnable()
     {
         BulletShot();
@@ -25,8 +27,11 @@ public class RepeaterTrigger : MonoBehaviour
     {
         if (shootIndex > 0)
         {
+
             if (repeaterData.shootSound != null)
-                AudioSource.PlayClipAtPoint(repeaterData.shootSound, Camera.main.transform.position, 5f);
+                AudioSource.PlayClipAtPoint(repeaterData.shootSound, Camera.main.transform.position, 0.5f);
+
+            repeater.MuzzleFlash();
 
             GameObject shot = Instantiate(repeaterData.bulletPrefab, transform.position, transform.rotation);
             IBullet shotData = shot.GetComponent<IBullet>();

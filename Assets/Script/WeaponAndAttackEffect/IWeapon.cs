@@ -18,6 +18,7 @@ public abstract class IWeapon : MonoBehaviour
     protected Quaternion launchDir;
     protected int handPos; //determine right or left hand, right for 1 and left for 0
     protected GameObject effectIns;
+    protected AudioSource shootAudio;
 
     protected void Awake() 
     {
@@ -27,6 +28,8 @@ public abstract class IWeapon : MonoBehaviour
             handPos = 0;
         else
             handPos = 2;
+
+        shootAudio = GetComponent<AudioSource>();
     }
     protected virtual void Start()
     {
@@ -81,7 +84,6 @@ public abstract class IWeapon : MonoBehaviour
             {
                 AttackMode();
                 currentCooldown = damageData.buffedCooldown;
-                //MuzzleFlash();
             }
     }
 
@@ -94,7 +96,7 @@ public abstract class IWeapon : MonoBehaviour
         else return false;
     }
 
-    protected void MuzzleFlash()
+    public void MuzzleFlash()
     {
         effectIns.SetActive(true);
         Invoke("DisableFlash", 0.1f);

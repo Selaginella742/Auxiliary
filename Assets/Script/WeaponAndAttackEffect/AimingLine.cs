@@ -19,7 +19,7 @@ public class AimingLine : MonoBehaviour
         var al = GameObject.Instantiate(aimingLine,transform);
         lr = al.GetComponent<LineRenderer>();
 
-        nodes = new Vector3[]{Vector3.forward * 0.1f, Vector3.forward * length * 0.5f };
+        nodes = new Vector3[]{Vector3.forward * 0.1f, Vector3.forward * length };
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class AimingLine : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, length))
         {
-            nodes[1] = Vector3.forward * hit.distance * 0.5f;
+            nodes[1] = Vector3.forward * hit.distance;
             lr.startColor = Color.red;
             lr.endColor = Color.red;
             lr.startWidth = width +0.1f;
@@ -36,7 +36,7 @@ public class AimingLine : MonoBehaviour
         }
         else
         {
-            nodes[1] = Vector3.forward * length * 0.5f;
+            nodes[1] = Vector3.forward * length;
             lr.startColor = Color.green;
             lr.endColor = Color.green;
             lr.startWidth = width;

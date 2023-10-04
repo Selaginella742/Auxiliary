@@ -14,7 +14,7 @@ public class Repeater2Controller : IWeapon
     [Min(0)]
     public int bulletAmount;
     [Tooltip("This controls the time between each shot")]
-    [Min(0)]
+    [Min(0.01f)]
     public float timeBetweenShot;
 
     protected override void Start()
@@ -31,6 +31,7 @@ public class Repeater2Controller : IWeapon
         repeaterTrig.timeBetween = timeBetweenShot;
         repeaterTrig.shootIndex = bulletAmount;
         repeaterTrig.repeaterData = damageData;
+        repeaterTrig.repeater = this;
 
         triggerIns.SetActive(true);
     }

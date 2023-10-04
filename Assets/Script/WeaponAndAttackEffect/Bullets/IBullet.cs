@@ -17,7 +17,6 @@ public abstract class IBullet : MonoBehaviour
     [ReadOnly] public float impulse;
 
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         bulletMovement(speed);
