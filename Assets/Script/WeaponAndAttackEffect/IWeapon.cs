@@ -41,6 +41,7 @@ public abstract class IWeapon : MonoBehaviour
 
         effectIns = Instantiate(shootEffect, launchPos, launchDir, transform);
         effectIns.SetActive(false);
+
     }
     protected virtual void FixedUpdate()
     {
@@ -83,8 +84,12 @@ public abstract class IWeapon : MonoBehaviour
         if (Input.GetMouseButton(handPos))
             if (currentCooldown <= 0)
             {
+                if (shootSound != null)
+                    AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, 5f);
+
                 AttackMode();
                 currentCooldown = damageData.buffedCooldown;
+                //MuzzleFlash();
             }
     }
 
