@@ -6,13 +6,16 @@ using UnityEngine;
 public class PlayerSwitchWeapon : MonoBehaviour
 {
     public WeaponList_SO weaponList;
-    public CharacterData_SO playerData;
+    CharacterData_SO playerData;
 
     GameObject[] weapons; // the weapons in the weapon holder
     int weaponIndex;
 
     void Start()
     {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        playerData = player.GetComponent<CharacterStats>().characterData;
+
         weapons = new GameObject[weaponList.weaponList.Count];
         for (int i = 0; i < weaponList.weaponList.Count; i++)
         {

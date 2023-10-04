@@ -23,8 +23,6 @@ public class Repeater2Controller : IWeapon
     }
     protected override void AttackMode() 
     {
-        if (InteractWithUI())
-            return;
         var repeaterIns = Instantiate(repeaterTrigger,launchPos,launchDir,transform);
         var repeaterTrig = repeaterIns.GetComponent<RepeaterTrigger>();
 
@@ -32,14 +30,5 @@ public class Repeater2Controller : IWeapon
         repeaterTrig.timeBetween = timeBetweenShot;
         repeaterTrig.shootIndex = bulletAmount;
         repeaterTrig.repeaterData = damageData;
-    }
-
-    bool InteractWithUI()
-    {
-        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
-        {
-            return true;
-        }
-        else return false;
     }
 }

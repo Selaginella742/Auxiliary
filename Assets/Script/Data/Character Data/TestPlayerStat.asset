@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e855c40985ef44d83dbf4767300503, type: 3}
   m_Name: TestPlayerStat
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 430
   baseDefence: 0
   baseSpeed: 10
   baseDashCool: 0
   dashSpeed: 50
-  currentHealth: 100
+  currentHealth: 430
   currentDefence: 0
   currentSpeed: 10
   currentDashCool: 0
   currentDashSpeed: 50
-  leftWeaponIndex: 0
-  rightWeaponIndex: 1
+  leftWeaponIndex: 1
+  rightWeaponIndex: 2

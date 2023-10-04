@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum WeaponType {bullet, ray, meele};
 
@@ -39,13 +40,16 @@ public abstract class IWeapon : MonoBehaviour
     }
     protected virtual void FixedUpdate()
     {
+        if (!InteractWithUI())
+        {
+            CalculateCooldown(Time.deltaTime);
 
-       CalculateCooldown(Time.deltaTime);
+            UpdateLocation();
+            damageData.UpdateData();
 
-       UpdateLocation();
-       damageData.UpdateData();
 
-        Attack();
+            Attack();
+        }
     }
 
     /**
@@ -78,6 +82,15 @@ public abstract class IWeapon : MonoBehaviour
                 AttackMode();
                 currentCooldown = damageData.buffedCooldown;
             }
+    }
+
+    bool InteractWithUI()
+    {
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            return true;
+        }
+        else return false;
     }
 
     /**

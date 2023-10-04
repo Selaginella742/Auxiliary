@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: WeaponList
   m_EditorClassIdentifier: 
   weaponList:
+  - {fileID: 105836294899507404, guid: 86add380192175f47abfd3047fe8fdce, type: 3}
   - {fileID: 8452419530997283076, guid: d3a5b2fcb5546d847981e3c89fb9ce96, type: 3}
   - {fileID: 24483405991098437, guid: 1647089b45c240745966486284375216, type: 3}
