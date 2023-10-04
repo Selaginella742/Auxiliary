@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class TreasureBox : MonoBehaviour
 {
-    // Start is called before the first frame update
+    LoopSpawner spawner;
     void Start()
     {
-        
+        spawner = GetComponent<LoopSpawner>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (other.gameObject.tag == "Player")
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                spawner.SpawnLoot();
+                Destroy(this.gameObject);
+            }
+        }
     }
 }

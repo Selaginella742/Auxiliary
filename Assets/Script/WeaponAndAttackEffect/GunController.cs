@@ -16,5 +16,6 @@ public class GunController : IWeapon
 
         shotData.affectDamage = damageData.CurrentDamage();
         shotData.launchSource = LaunchSource.player;
+        shotData.speed = damageData.buffedBulletSpeed;
     }
 }

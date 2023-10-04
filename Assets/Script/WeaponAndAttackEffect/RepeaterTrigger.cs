@@ -13,7 +13,7 @@ public class RepeaterTrigger : MonoBehaviour
     [HideInInspector]
     public WeaponData repeaterData;
   
-    void Start()
+    void OnEnable()
     {
         BulletShot();
     }
@@ -34,6 +34,6 @@ public class RepeaterTrigger : MonoBehaviour
             Invoke("BulletShot", timeBetween);
         }
         else
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
     }
 }

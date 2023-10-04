@@ -22,6 +22,7 @@ public abstract class IWeapon : MonoBehaviour
     protected Vector3 launchPos;
     protected Quaternion launchDir;
     protected int handPos; //determine right or left hand, right for 1 and left for 0
+    protected GameObject effectIns;
 
     protected void Awake() 
     {
@@ -37,6 +38,9 @@ public abstract class IWeapon : MonoBehaviour
         currentCooldown = damageData.buffedCooldown;
         launchPos = transform.position;
         launchDir = transform.rotation;
+
+        effectIns = Instantiate(shootEffect, launchPos, launchDir, transform);
+        effectIns.SetActive(false);
     }
     protected virtual void FixedUpdate()
     {
@@ -93,6 +97,17 @@ public abstract class IWeapon : MonoBehaviour
         else return false;
     }
 
+    protected void MuzzleFlash()
+    {
+        effectIns.SetActive(true);
+        Invoke("DisableFlash", 0.1f);
+    }
+
+    void DisableFlash()
+    {
+        effectIns.SetActive(false);
+    }
+
     /**
      * The function of the weapon
      */
@@ -109,10 +124,11 @@ public class WeaponData
     
     [Header("Damage Variables")]
     [Min(0f)]
-    [SerializeField] public float coolDown;
+    public float coolDown;
     public int damage;
     public float criticalMultiplier;
     public float criticalChance;
+    public float bulletSpeed;
 
    
 
@@ -126,6 +142,7 @@ public class WeaponData
     [ReadOnly] public bool isCritical;
     [ReadOnly] public float buffedCriticalChance;
     [ReadOnly] public float buffedCriticalMulti;
+    [ReadOnly] public float buffedBulletSpeed;
 
     /**
      * This method update the weapon's damage data after the player get some damage buffs
@@ -145,6 +162,7 @@ public class WeaponData
             buffedDamage = damage;
             buffedCriticalChance = criticalChance;
             buffedCriticalMulti = criticalMultiplier;
+            buffedBulletSpeed = bulletSpeed;
         }
     }
     /**

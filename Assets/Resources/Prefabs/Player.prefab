@@ -45,7 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponList: {fileID: 11400000, guid: fbad696ce40ea274880555e67d0263c5, type: 2}
-  playerData: {fileID: 11400000, guid: b18c613dd8e910f4899b6d7c8e15e16b, type: 2}
 --- !u!1 &2237348839731506595
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +90,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponList: {fileID: 11400000, guid: fbad696ce40ea274880555e67d0263c5, type: 2}
-  playerData: {fileID: 11400000, guid: b18c613dd8e910f4899b6d7c8e15e16b, type: 2}
 --- !u!1 &3574371556098074603
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,14 +146,14 @@ CharacterController:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Height: 7.36
   m_Radius: 2.13
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_SlopeLimit: 0
+  m_StepOffset: 0
+  m_SkinWidth: 0.0001
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 3, z: 0}
 --- !u!114 &7408829663442717382
 MonoBehaviour:

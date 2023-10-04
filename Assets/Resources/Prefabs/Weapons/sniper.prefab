@@ -48,18 +48,20 @@ MonoBehaviour:
   weaponType: 0
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   shootSound: {fileID: 0}
-  shootEffect: {fileID: 0}
+  shootEffect: {fileID: 6415271522330289220, guid: b57a891dc403a7644a444a33a4ff7181, type: 3}
   damageData:
     coolDown: 0.5
     damage: 25
     criticalMultiplier: 0
     criticalChance: 0
+    bulletSpeed: 200
     playerBuff: {fileID: 0}
     buffedCooldown: 0
     buffedDamage: 0
     isCritical: 0
     buffedCriticalChance: 0
     buffedCriticalMulti: 0
+    buffedBulletSpeed: 0
 --- !u!114 &3275103679102199366
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class PickableWeapon : MonoBehaviour
         playerStat = player.GetComponent<CharacterStats>().characterData;
 
         //instantiate the ui panel
-        canvas = GameObject.Find("WeaponDropCanvas");
+        canvas = GameObject.Find("ItemDropCanvas");
         weaponInfoUITemplate = Resources.Load<GameObject>("Prefabs/UI/WeaponDropUI");
         weaponInfoUIIns = Instantiate(weaponInfoUITemplate, canvas.transform);
         uiPos = weaponInfoUIIns.GetComponent<RectTransform>();
