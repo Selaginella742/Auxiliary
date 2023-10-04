@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   itemName: Test Item
-  itemIcon: {fileID: -3915288548941881612, guid: 2a01691a87fedbe4aa6de6f1c0c0f3d4, type: 3}
+  itemIcon: {fileID: 21300000, guid: 2bae01139f89d1d44a8e8e4787dcd262, type: 3}
   itemAmount: 1
   stackable: 1
   description: 'This item is for Prototype test only.
 
-    It will increase 100 maxhealth
-    and damage.'
+    It will increase 10 Health
+    and 5 Speed'
   itemHealth: 10
   itemDefence: 0
   itemSpeed: 5
