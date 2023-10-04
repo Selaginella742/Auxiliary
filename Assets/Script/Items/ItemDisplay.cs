@@ -11,7 +11,7 @@ public class ItemDisplay : MonoBehaviour
     void Start()
     {
         canvas = GameObject.Find("WeaponDropCanvas");
-        GameObject icon = Instantiate(image, canvas.transform);
+        //GameObject icon = Instantiate(image, canvas.transform);
         
     }
 
