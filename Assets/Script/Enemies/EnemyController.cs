@@ -13,7 +13,7 @@ public class EnemyController : MonoBehaviour
 
     private NavMeshAgent agent;
 
-    //private Animator anim; //For enemy's animation
+    private Animator anim; //For enemy's animation
 
     private Collider coll;
 
@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         characterStats = GetComponent<CharacterStats>();
         speed = agent.speed;
         guardPos = transform.position;
@@ -78,16 +78,16 @@ public class EnemyController : MonoBehaviour
         }
 
         SwitchStates();
-        //SwitchAnimation();
+        SwitchAnimation();
         lastAttackTime -= Time.deltaTime;// Enemy attack CD
 
     }
 
     void SwitchAnimation()
     {
-        //anim.SetBool("Walk", isWalk);
-        //anim.SetBool("Chase", isChase);
-        //anim.SetBool("Follow", isFollow);
+        anim.SetBool("Walk", isWalk);
+        anim.SetBool("Chase", isChase);
+        anim.SetBool("Follow", isFollow);
         //anim.SetBool("Death", isDeath);
     }
 
