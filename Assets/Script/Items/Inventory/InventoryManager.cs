@@ -14,6 +14,8 @@ public class InventoryManager : Singleton<InventoryManager>
 
     [Header("Inventory Data")]
 
+    public InventoryData_SO inventoryTemplate;
+
     public InventoryData_SO inventoryData;
 
     [Header("Containers")]
@@ -30,6 +32,12 @@ public class InventoryManager : Singleton<InventoryManager>
 
     public GameObject tooltip;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        if(inventoryTemplate != null)
+            inventoryData = Instantiate(inventoryTemplate);
+    }
 
     void Start()
     {
@@ -50,6 +58,15 @@ public class InventoryManager : Singleton<InventoryManager>
         return false;
     }
 
+    public void SaveData()
+    {
+        
+    }
+
+    public void LoadData()
+    {
+
+    }
 
 
     

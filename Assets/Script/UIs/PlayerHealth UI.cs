@@ -12,6 +12,8 @@ public class PlayerHealthUI : MonoBehaviour
 
     void Awake()
     {
+        characterStats.characterData.maxHealth = 100;
+        characterStats.characterData.baseSpeed = 10;
         healthSlider = transform.GetChild(0).GetComponent<Image>();
 
     }
