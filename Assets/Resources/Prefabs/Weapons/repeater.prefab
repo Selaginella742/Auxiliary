@@ -97,7 +97,7 @@ MonoBehaviour:
     buffedCriticalMulti: 0
     buffedBulletSpeed: 0
   bulletAmount: 3
-  timeBetweenShot: 0.5
+  timeBetweenShot: 0.2
 --- !u!114 &7252285182446571985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimingLine: {fileID: 9199034848592671565, guid: 4faa26686c3a82b4aaac0adb10eeeafe, type: 3}
-  length: 20
+  length: 50
   width: 0.05
 --- !u!82 &8610689078624576223
 AudioSource:
