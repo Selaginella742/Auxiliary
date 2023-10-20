@@ -10,6 +10,8 @@ public abstract class IBullet : MonoBehaviour
     public float existTime;
     public GameObject bulletEffect;
     private GameObject bulletSound;
+    public GameObject hitEffect;
+    private GameObject hitIns;
 
     [Header("Monitoring Realtime Bullet Data")]
     [ReadOnly] public LaunchSource launchSource;
@@ -38,6 +40,9 @@ public abstract class IBullet : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision coli) 
     {
+        hitIns = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(hitIns, 1.0f);
+
         bulletSound = Instantiate(bulletEffect, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
         Destroy(bulletSound,1.0f);
