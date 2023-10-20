@@ -17,6 +17,7 @@ public abstract class IBullet : MonoBehaviour
     [ReadOnly] public float impulse;
 
 
+
     void FixedUpdate()
     {
         bulletMovement(speed);
@@ -36,6 +37,7 @@ public abstract class IBullet : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision coli) 
     {
+
         Destroy(this.gameObject);
 
 

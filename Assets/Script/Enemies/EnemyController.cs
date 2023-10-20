@@ -32,7 +32,9 @@ public class EnemyController : MonoBehaviour
     private float lastAttackTime;
     private Quaternion guardRotation;
 
-
+    public GameObject explosionEffect;
+    private GameObject boomEffect;
+    private bool isBoom;
     public float sightRadius;
     private float speed;
     private GameObject attackTarget;
@@ -201,8 +203,14 @@ public class EnemyController : MonoBehaviour
 
                 coll.enabled = false;
                 agent.enabled = false;
+                if (!isBoom)
+                { 
+                    boomEffect = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                    isBoom = true;
+                }
                 FindObjectOfType<AudioManager>().Play("EnemyDeath");
-                Destroy(gameObject, 0.5f);
+                Destroy(gameObject, 0.1f);
+                Destroy(boomEffect, 2.0f);
                 break;
         }
     }
