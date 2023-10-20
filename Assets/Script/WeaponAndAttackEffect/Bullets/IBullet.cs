@@ -8,6 +8,8 @@ public abstract class IBullet : MonoBehaviour
 {
     public float speed;
     public float existTime;
+    public GameObject bulletEffect;
+    private GameObject bulletSound;
 
     [Header("Monitoring Realtime Bullet Data")]
     [ReadOnly] public LaunchSource launchSource;
@@ -15,7 +17,6 @@ public abstract class IBullet : MonoBehaviour
     [ReadOnly] public float affectSpeed;
     [ReadOnly] public float affectTime;
     [ReadOnly] public float impulse;
-
 
 
     void FixedUpdate()
@@ -37,8 +38,9 @@ public abstract class IBullet : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision coli) 
     {
-
+        bulletSound = Instantiate(bulletEffect, transform.position, Quaternion.identity);
         Destroy(this.gameObject);
+        Destroy(bulletSound,1.0f);
 
 
         if (coli.gameObject.tag == "Enemy" && launchSource == LaunchSource.player)
