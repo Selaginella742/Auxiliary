@@ -4818,6 +4818,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   gunModel: {fileID: 1132747663}
   lookAtTime: 2
+  explosionEffect: {fileID: 167558, guid: a11dc34cafe3dfd4facb59cfb4e72de8, type: 3}
   sightRadius: 60
   patrolRange: 60
 --- !u!195 &1200098336
@@ -6479,6 +6480,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   gunModel: {fileID: 1812707258}
   lookAtTime: 2
+  explosionEffect: {fileID: 167558, guid: a11dc34cafe3dfd4facb59cfb4e72de8, type: 3}
   sightRadius: 60
   patrolRange: 60
 --- !u!195 &1539276720
@@ -7116,6 +7118,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   gunModel: {fileID: 1258404581}
   lookAtTime: 2
+  explosionEffect: {fileID: 167558, guid: a11dc34cafe3dfd4facb59cfb4e72de8, type: 3}
   sightRadius: 60
   patrolRange: 60
 --- !u!195 &1615513201
@@ -7423,6 +7426,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   gunModel: {fileID: 1203247555}
   lookAtTime: 2
+  explosionEffect: {fileID: 167558, guid: a11dc34cafe3dfd4facb59cfb4e72de8, type: 3}
   sightRadius: 60
   patrolRange: 60
 --- !u!195 &1641490587
