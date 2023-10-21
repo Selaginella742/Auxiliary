@@ -343,9 +343,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 500
   Dir: {x: 3, y: 2, z: 0}
+  rb: {fileID: 0}
+  Ps: {fileID: 0}
   FxPrefabLOW: {fileID: 119844, guid: 05b4c7cb9f43acc4a9950d8d152ae51c, type: 3}
   FxPrefabHIGH: {fileID: 119844, guid: 42d3d29b1bce3214cacf1c6caaf5734d, type: 3}
   Anim: {fileID: 1137208512}
+  mh: {fileID: 0}
 --- !u!4 &162717809
 Transform:
   m_ObjectHideFlags: 0
@@ -1113,7 +1116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1137208513
 RectTransform:
   m_ObjectHideFlags: 0
