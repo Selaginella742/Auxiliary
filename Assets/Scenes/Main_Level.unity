@@ -2712,6 +2712,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615900098}
   m_CullTransparentMesh: 1
+--- !u!1 &622134354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
+  m_PrefabInstance: {fileID: 2126276377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &693014928 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6216507305410497726, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
@@ -3115,6 +3120,70 @@ PrefabInstance:
     - target: {fileID: 4696173903702479614, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: lootItems.Array.data[1].weight
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 622134354}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[1].item
+      value: 
+      objectReference: {fileID: 1543945805}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[2].item
+      value: 
+      objectReference: {fileID: 1543945805}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[3].item
+      value: 
+      objectReference: {fileID: 1543945805}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[4].item
+      value: 
+      objectReference: {fileID: 1543945805}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[0].weight
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[1].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[2].weight
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[3].weight
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: spawner.lootItems.Array.data[4].weight
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 1543945805}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[1].item
+      value: 
+      objectReference: {fileID: 622134354}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[0].weight
+      value: 2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[1].weight
+      value: 5.37
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6491,6 +6560,11 @@ Transform:
   - {fileID: 873040430}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1543945805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
+  m_PrefabInstance: {fileID: 1403435560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1550925844 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5588336598130662367, guid: 2d7504934d8312647ab1d345ab847d90, type: 3}

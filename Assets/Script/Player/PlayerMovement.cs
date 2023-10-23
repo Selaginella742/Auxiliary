@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (currentCool <= 0)
             {
-                performDash();
+                StartCoroutine(performDash());
                 currentCool = playerData.currentDashCool;
             }
         }
@@ -74,19 +74,12 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<CharacterController>().Move(isoDir * speed * Time.deltaTime);
     }
 
-    void performDash() 
+    IEnumerator performDash() 
     {
-
         playerData.currentSpeed += playerData.currentDashSpeed;
 
-        Invoke("ResetSpeed", 0.1f);
-    }
+        yield return new WaitForSeconds(0.1f);
 
-    /**
-     * This method ends the dash by set the speed into normal stats
-     */
-    void ResetSpeed() 
-    {
         playerData.currentSpeed -= playerData.currentDashSpeed;
     }
 }

@@ -70,7 +70,6 @@ public class PickableWeapon : MonoBehaviour
         if (collision.gameObject.tag == "Player")// check if the player is at the position
         {
             weaponInfoUIIns.SetActive(true);
-            Debug.Log("CTRL + mouse to change");
             if (Input.GetKey(KeyCode.LeftControl)) // press left ctrl + right or left mouse button to change right or left weapon
             {
                 if (Input.GetMouseButton(0))

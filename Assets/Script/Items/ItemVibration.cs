@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * This class implements the vibration and rotation of the dropped item.
+ */
 public class ItemVibration : MonoBehaviour
 {
     float sineCalc;

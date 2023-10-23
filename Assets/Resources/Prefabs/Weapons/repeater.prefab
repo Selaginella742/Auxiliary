@@ -97,7 +97,7 @@ MonoBehaviour:
     buffedCriticalMulti: 0
     buffedBulletSpeed: 0
   bulletAmount: 3
-  timeBetweenShot: 0.2
+  timeBetweenShot: 0.04
 --- !u!114 &7252285182446571985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimingLine: {fileID: 9199034848592671565, guid: 4faa26686c3a82b4aaac0adb10eeeafe, type: 3}
   length: 50
-  width: 0.05
+  width: 0.03
 --- !u!82 &8610689078624576223
 AudioSource:
   m_ObjectHideFlags: 0
@@ -120,11 +120,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5328984155865410608}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b617921e0278bb046a833acbc288ddca, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

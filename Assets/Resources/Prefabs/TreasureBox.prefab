@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1345472281742655184}
-  - component: {fileID: 4696173903702479614}
   - component: {fileID: 5180314917632777194}
   - component: {fileID: 4246480545384697999}
   - component: {fileID: 4838672719078711158}
@@ -36,24 +35,6 @@ Transform:
   - {fileID: 2226569487765030243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4696173903702479614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 803146949095978509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc1a4a4bf2a5e1b4ba90ea4a0c4980ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDone: 0
-  lootItems:
-  - item: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
-    weight: 0.4
-  - item: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
-    weight: 0.893
 --- !u!65 &5180314917632777194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f66b5bee03722444922493f07ca20c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner:
+    lootItems: []
 --- !u!1 &6022273324630531131
 GameObject:
   m_ObjectHideFlags: 0

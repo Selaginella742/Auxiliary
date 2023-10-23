@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class Repeater2Controller : IWeapon
 {
@@ -17,22 +18,41 @@ public class Repeater2Controller : IWeapon
     [Min(0.01f)]
     public float timeBetweenShot;
 
+    private int shootIndex;
+
     protected override void Start()
     {
         base.Start();
-        repeaterTrigger = Resources.Load<GameObject>("Prefabs/RepeaterTrigger");//load the trigger(the prefab to control multiply shot)
-        triggerIns = Instantiate(repeaterTrigger, launchPos, launchDir, transform);
-        triggerIns.SetActive(false);
+
+        shootIndex = 0;
     }
     protected override void AttackMode() 
     {
-        var repeaterTrig = triggerIns.GetComponent<RepeaterTrigger>();
+        shootIndex = bulletAmount;
 
-        repeaterTrig.timeBetween = timeBetweenShot;
-        repeaterTrig.shootIndex = bulletAmount;
-        repeaterTrig.repeaterData = damageData;
-        repeaterTrig.repeater = this;
+        BulletShot();
+    }
 
-        triggerIns.SetActive(true);
+    /**
+     * This method shoot a bullet and recursively call itself until it finishes one shooting turn
+     */
+    void BulletShot()
+    {
+        if (shootIndex > 0)
+        {
+
+            if (damageData.shootSound != null)
+                AudioSource.PlayClipAtPoint(damageData.shootSound, Camera.main.transform.position, 0.5f);
+
+            MuzzleFlash();
+
+            GameObject shot = Instantiate(damageData.bulletPrefab, transform.position, transform.rotation);
+            IBullet shotData = shot.GetComponent<IBullet>();
+            shotData.affectDamage = damageData.CurrentDamage();
+            shotData.launchSource = LaunchSource.player;
+            shootIndex--;
+
+            Invoke("BulletShot", timeBetweenShot);
+        }
     }
 }
