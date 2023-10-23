@@ -11,18 +11,18 @@ public class InventoryData_SO : ScriptableObject
     {
         bool found = false;
 
-        if (newItemData.stackable)
-        {
-            foreach(var item in items)
-            {
-                if(item.ItemData == newItemData)
-                {
-                    item.amount += amount;
-                    found = true;
-                    break;
-                }
-            }
-        }
+        //if (newItemData.stackable)
+        //{
+        //    foreach(var item in items)
+        //    {
+        //        if(item.ItemData == newItemData)
+        //        {
+        //            item.amount += amount;
+        //            found = true;
+        //            break;
+        //        }
+        //    }
+        //}
 
         for (int i = 0; i < items.Count; i++)
         {
