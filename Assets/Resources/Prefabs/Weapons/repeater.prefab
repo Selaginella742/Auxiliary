@@ -88,7 +88,7 @@ MonoBehaviour:
     damage: 25
     criticalMultiplier: 0
     criticalChance: 0
-    bulletSpeed: 0
+    bulletSpeed: 150
     playerBuff: {fileID: 0}
     buffedCooldown: 0
     buffedDamage: 0
