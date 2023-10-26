@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //PlayerMovementController(playerData.currentSpeed);
-        PlayerMovementTranslate(playerData.currentSpeed);
+        PlayerMovementController(playerData.currentSpeed);
+        //PlayerMovementTranslate(playerData.currentSpeed);
 
         while (currentCool >= 0)
             currentCool -= Time.deltaTime;
