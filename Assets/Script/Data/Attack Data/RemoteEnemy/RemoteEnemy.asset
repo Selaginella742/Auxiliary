@@ -9,17 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a533a751890d9ea4b890b9ee014f2399, type: 3}
-  m_Name: Gun Data
+  m_Script: {fileID: 11500000, guid: 88d12d24fe8e1f647809f0099a402077, type: 3}
+  m_Name: RemoteEnemy
   m_EditorClassIdentifier: 
-  coolDown: 5
-  damage: 25
+  coolDown: 1
+  damage: 2
   criticalMultiplier: 0
   criticalChance: 0
   attackRange: 0
-  shootRange: 0
-  playerBuff: {fileID: 11400000, guid: e7c97e34cb50d3d40afc770386a8f7f2, type: 2}
-  buffedCooldown: 0
-  buffedDamage: 0
-  buffedCriticalChance: 0
-  buffedCriticalMulti: 0
+  shootRange: 20
