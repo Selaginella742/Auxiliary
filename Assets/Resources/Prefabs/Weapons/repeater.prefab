@@ -97,7 +97,7 @@ MonoBehaviour:
     buffedCriticalMulti: 0
     buffedBulletSpeed: 0
   bulletAmount: 3
-  timeBetweenShot: 0.04
+  timeBetweenShot: 0.1
 --- !u!114 &7252285182446571985
 MonoBehaviour:
   m_ObjectHideFlags: 0
