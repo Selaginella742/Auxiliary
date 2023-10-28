@@ -13,6 +13,8 @@ public class CharacterData_SO : ScriptableObject
     [Header("Player only")]
     public float baseDashCool;
     public float dashSpeed;
+    public int iniLeft = 0;
+    public int iniRight = 0;
 
     [Header("Realtime data")]
     public int currentHealth;

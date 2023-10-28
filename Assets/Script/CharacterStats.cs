@@ -161,5 +161,7 @@ public class CharacterStats : MonoBehaviour
         characterData.currentDefence = characterData.baseDefence;
         characterData.currentSpeed = characterData.baseSpeed;
         characterData.currentDashSpeed = characterData.dashSpeed;
+        characterData.leftWeaponIndex = characterData.iniLeft;
+        characterData.rightWeaponIndex = characterData.iniRight;
     }
 }

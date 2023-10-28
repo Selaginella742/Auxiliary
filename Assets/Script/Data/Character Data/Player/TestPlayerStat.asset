@@ -22,5 +22,5 @@ MonoBehaviour:
   currentSpeed: 10
   currentDashCool: 0
   currentDashSpeed: 100
-  leftWeaponIndex: 1
-  rightWeaponIndex: 2
+  leftWeaponIndex: 2
+  rightWeaponIndex: 0
