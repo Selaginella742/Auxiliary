@@ -21,6 +21,7 @@ public class PlayerSwitchWeapon : MonoBehaviour
         {
             GameObject weapon = Instantiate(weaponList.weaponList[i], transform); // create all weapons in the weaponlist
             weapon.SetActive(false);
+            weapon.GetComponentInChildren<IWeapon>().enabled = false;
             weapons[i] = weapon;
             
         }
@@ -38,22 +39,26 @@ public class PlayerSwitchWeapon : MonoBehaviour
             newWeapon = playerData.leftWeaponIndex;
         
         if (newWeapon != weaponIndex)
-            SwitchWeapon(newWeapon);
+            StartCoroutine(SwitchWeapon(newWeapon));
     }
     /**
      * This method switch the player's current weapon based on the 
      * input index represented the id of the weapon
      */
-    void SwitchWeapon(int newIndex) 
+    IEnumerator SwitchWeapon(int newIndex) 
     {
         weapons[weaponIndex].SetActive(false);
+        weapons[weaponIndex].GetComponentInChildren<IWeapon>().enabled = false;
 
         for (int i = 0; i < weapons.Length; i++)// find the weapon with that input index
             if (i == newIndex)
             {
                 weapons[i].SetActive(true);
+                weaponIndex = newIndex;
+                yield return new WaitForSeconds(0.2f);
+
+                weapons[i].GetComponentInChildren<IWeapon>().enabled = true;
                 break;
-            }
-        weaponIndex = newIndex;
+            } 
     }
 }
