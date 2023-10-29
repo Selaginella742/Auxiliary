@@ -6,6 +6,7 @@ public class OpenBag : MonoBehaviour
 
 {
     public GameObject myBag;
+    public GameObject player;
 
     void Update()
     {
@@ -19,11 +20,14 @@ public class OpenBag : MonoBehaviour
             if (!myBag.activeSelf)
             {
                 myBag.SetActive(true);
+                player.GetComponent<PlayerFSM>().SwitchState(StateType.ShowingInfo);
+
             }
 
             else if (myBag.activeSelf)
             {
                 myBag.SetActive(false);
+                player.GetComponent<PlayerFSM>().SwitchState(StateType.Walking);
             }
         }
     }

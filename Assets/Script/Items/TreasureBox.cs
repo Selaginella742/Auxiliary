@@ -56,7 +56,7 @@ public class TreasureSpawner
         if (weightSheet == null)
             InitilizeSpawner();
 
-        float random = Random.value * weightSheet[weightSheet.Length - 1];
+        float random = Random.Range(0, weightSheet[weightSheet.Length - 1]);
 
         for (int i = 0; i < lootItems.Length; i++)
         {

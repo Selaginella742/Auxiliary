@@ -41,7 +41,7 @@ public abstract class IWeapon : MonoBehaviour
         effectIns.SetActive(false);
 
     }
-    protected virtual void FixedUpdate()
+    protected virtual void Update()
     {
         if (!InteractWithUI())
         {

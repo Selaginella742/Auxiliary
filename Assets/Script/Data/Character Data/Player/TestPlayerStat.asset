@@ -17,10 +17,12 @@ MonoBehaviour:
   baseSpeed: 10
   baseDashCool: 0
   dashSpeed: 100
+  iniLeft: 0
+  iniRight: 0
   currentHealth: 100
   currentDefence: 0
   currentSpeed: 10
   currentDashCool: 0
   currentDashSpeed: 100
-  leftWeaponIndex: 2
+  leftWeaponIndex: 0
   rightWeaponIndex: 0

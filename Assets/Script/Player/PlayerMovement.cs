@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
         PlayerMovementController(playerData.currentSpeed);
         //PlayerMovementTranslate(playerData.currentSpeed);
 
-        while (currentCool >= 0)
+        if (currentCool >= 0)
             currentCool -= Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.LeftShift))

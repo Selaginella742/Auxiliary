@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public GameObject upperBody;
     // Update is called once per frame
     void Update()
     {
@@ -25,6 +20,6 @@ public class PlayerRotation : MonoBehaviour
         var correctAngle = angle - 45;  //Camera.main.transform.rotation.y;
 
         //Debug.Log(Camera.main.transform.rotation.y);
-        transform.rotation = Quaternion.Euler(0,correctAngle,0);
+        upperBody.transform.rotation = Quaternion.Euler(0,correctAngle,0);
     }
 }

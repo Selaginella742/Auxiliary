@@ -15,8 +15,8 @@ public class PlayerInformation : MonoBehaviour
     void Update()
     {
         var playerinformation = GameObject.Find("Player").GetComponent<CharacterStats>();
-        var weaponLeft = GameObject.Find("LeftWeaponHolder").GetComponentInChildren<IWeapon>();
-        var weaponRight = GameObject.Find("RightWeaponHolder").GetComponentInChildren<IWeapon>();
+        var weaponLeft = GameObject.Find("LeftWeaponHolder").GetComponentInChildren<IWeapon>(false);
+        var weaponRight = GameObject.Find("RightWeaponHolder").GetComponentInChildren<IWeapon>(false);
         healthText.text = string.Format("Health:{0}/{1}",playerinformation.characterData.currentHealth, playerinformation.characterData.maxHealth);
         attackText.text = string.Format("Attack:L:{0} R:{1}", weaponLeft.damageData.buffedDamage,weaponRight.damageData.buffedDamage);
         defenceText.text = string.Format("Defence:{0}", playerinformation.characterData.currentDefence);
