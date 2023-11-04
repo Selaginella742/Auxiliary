@@ -32,6 +32,8 @@ public class InventoryManager : Singleton<InventoryManager>
 
     public GameObject tooltip;
 
+    private CharacterStats playerData;
+
     protected override void Awake()
     {
         base.Awake();
@@ -42,6 +44,7 @@ public class InventoryManager : Singleton<InventoryManager>
     void Start()
     {
         inventoryUI.RefreshUI();
+        playerData = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>();
     }
 
     public bool CheckInInventoryUI(Vector3 position)
@@ -68,6 +71,12 @@ public class InventoryManager : Singleton<InventoryManager>
 
     }
 
+    public void AddItemToInventory(ItemData_SO item)
+    {
+        inventoryData.AddItem(item, item.itemAmount);
+        inventoryUI.RefreshUI();
 
+        item.ApplyEffectOnPlayer(playerData);
+    }
     
 }

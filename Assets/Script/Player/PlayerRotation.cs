@@ -6,7 +6,7 @@ public class PlayerRotation : MonoBehaviour
 {
     public GameObject upperBody;
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         PlayerRotationMouse();
     }

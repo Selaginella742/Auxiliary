@@ -30,4 +30,15 @@ public class ItemData_SO : ScriptableObject
     public float itemDashCool;
 
     public float itemDashSpeed;
+
+
+    public virtual void ApplyEffectOnPlayer(CharacterStats playerData) 
+    {
+        playerData.characterData.maxHealth += itemHealth;
+        playerData.characterData.currentHealth += itemHealth;
+        playerData.characterData.currentDefence += itemDefence;
+        playerData.characterData.currentSpeed += itemSpeed;
+        playerData.characterData.currentDashCool += itemDashCool;
+
+    }
 }

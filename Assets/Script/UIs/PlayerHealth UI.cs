@@ -19,8 +19,10 @@ public class PlayerHealthUI : MonoBehaviour
     void Update()
     {
         UpdateHealth();
-        if (characterStats.characterData.currentHealth <= 0)
-            SceneManager.LoadScene("Menu");
+        if (characterStats.characterData.currentHealth <= 0) 
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerFSM>().GameOver();
+        }
     }
 
     void UpdateHealth()

@@ -12,6 +12,7 @@ public class TreasureBox : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log("trigger enter");
         if (other.gameObject.tag == "Player")
         {
             if (Input.GetKeyDown(KeyCode.F))

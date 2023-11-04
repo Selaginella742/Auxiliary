@@ -27,6 +27,6 @@ public class WalkingState : IState
 
     public void OnUpdate()
     {
-        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        
     }
 }

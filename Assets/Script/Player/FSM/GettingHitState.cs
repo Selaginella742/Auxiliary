@@ -17,6 +17,8 @@ public class GettingHitState : IState
     {
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<CharacterController>().enabled = false;
+
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
     public void OnExit()

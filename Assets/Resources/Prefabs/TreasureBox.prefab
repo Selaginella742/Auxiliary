@@ -75,8 +75,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.088888, y: 1, z: 3.1259966}
-  m_Center: {x: 0.118694544, y: 0, z: -0.1611085}
+  m_Size: {x: 5.088888, y: 2.5890038, z: 3.6837149}
+  m_Center: {x: 0.11869454, y: 0.794503, z: 0.11774995}
 --- !u!114 &4838672719078711158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f66b5bee03722444922493f07ca20c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner:
+  weaponDropList:
     lootItems: []
 --- !u!1 &6022273324630531131
 GameObject:
