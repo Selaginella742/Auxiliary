@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float rotateSpeed;
-    public CharacterData_SO playerData;
+    CharacterData_SO playerData;
 
     float currentCool;
     //private Animator anim;
     private void Start()
     {
+        playerData = this.gameObject.GetComponent<CharacterStats>().characterData;
         currentCool = playerData.currentDashCool;
     }
 
@@ -81,5 +82,10 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         playerData.currentSpeed -= playerData.currentDashSpeed;
+    }
+
+    public float GetCurrentCool() 
+    {
+        return currentCool;
     }
 }
