@@ -50,6 +50,7 @@ public class Repeater2Controller : IWeapon
             IBullet shotData = shot.GetComponent<IBullet>();
             shotData.affectDamage = damageData.CurrentDamage();
             shotData.launchSource = LaunchSource.player;
+            shotData.speed = damageData.buffedBulletSpeed;
             shootIndex--;
 
             Invoke("BulletShot", timeBetweenShot);

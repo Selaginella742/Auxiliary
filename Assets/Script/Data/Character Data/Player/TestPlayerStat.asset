@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   baseDefence: 0
-  baseSpeed: 10
+  baseSpeed: 20
   baseDashCool: 2
   dashSpeed: 100
   iniLeft: 0
   iniRight: 0
   currentHealth: 100
   currentDefence: 0
-  currentSpeed: 10
+  currentSpeed: 20
   currentDashCool: 0
   currentDashSpeed: 100
   leftWeaponIndex: 0
