@@ -46,11 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5801e50c596074d8719afbe7942e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Repeater
+  weaponName: repeater
   weaponIndex: 2
   weaponIcon: {fileID: 0}
-  description: A standard repeater that fits most mechs. While holding CTRL, press
-    left/right mouse button to equip
+  description: repeater for test, left CTRL + mouse button to change
 --- !u!65 &5416444430098470124
 BoxCollider:
   m_ObjectHideFlags: 0

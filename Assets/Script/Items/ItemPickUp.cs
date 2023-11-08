@@ -13,8 +13,6 @@ public class ItemPickUp : MonoBehaviour
             //TODO:put item into inventory
             InventoryManager.Instance.AddItemToInventory(itemData);
             Destroy(gameObject);
-            FindObjectOfType<AudioManager>().Play("ItemPickUp");
-
-        }
+        }    
     }
 }
