@@ -19927,7 +19927,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: lootItems.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
+      propertyPath: lootItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 7014733683165510287, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
+    - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
+      propertyPath: lootItems.Array.data[0].weight
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8197601128644326550, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: m_Name
@@ -20614,7 +20622,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: lootItems.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
+      propertyPath: lootItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 5596925729816711303, guid: d796d17069fbc864bb18188144503769, type: 3}
+    - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
+      propertyPath: lootItems.Array.data[0].weight
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5008236069780243856, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: isGuard
@@ -33579,8 +33595,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 259419444}
     m_Modifications:
     - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
+      propertyPath: lootItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 5596925729816711303, guid: d796d17069fbc864bb18188144503769, type: 3}
+    - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: lootItems.Array.data[0].weight
-      value: 0.1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8197601128644326550, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: m_Name
@@ -34956,6 +34976,14 @@ PrefabInstance:
       propertyPath: isGuard
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4754811804386035318, guid: 3468c2c284afaa84ba74fe40dd9aa8bd, type: 3}
+      propertyPath: lootItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 5596925729816711303, guid: d796d17069fbc864bb18188144503769, type: 3}
+    - target: {fileID: 4754811804386035318, guid: 3468c2c284afaa84ba74fe40dd9aa8bd, type: 3}
+      propertyPath: lootItems.Array.data[0].weight
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6015842261186908524, guid: 3468c2c284afaa84ba74fe40dd9aa8bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 796.8
@@ -35605,11 +35633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7014733683165510287, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
       propertyPath: m_Name
-      value: TestItem
-      objectReference: {fileID: 0}
-    - target: {fileID: 7014733683165510287, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: HP
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

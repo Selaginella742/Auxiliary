@@ -65,15 +65,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 570401731a7b2994db16f8a70def81cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 553
+      value: 657.68945
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 570401731a7b2994db16f8a70def81cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 706.02
+      value: 703.0425
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 570401731a7b2994db16f8a70def81cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 175
+      value: 612.38806
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 570401731a7b2994db16f8a70def81cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -432,5 +432,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDone: 0
   lootItems:
-  - item: {fileID: 7014733683165510287, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
+  - item: {fileID: 1238072829814605110, guid: 4dd5466e16248fa4a85cbb137104dee5, type: 3}
     weight: 0.1
