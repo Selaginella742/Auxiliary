@@ -87,10 +87,10 @@ public class EnemyController : MonoBehaviour
 
     void SwitchAnimation()
     {
-        //anim.SetBool("Walk", isWalk);
-        //anim.SetBool("Chase", isChase);
-        //anim.SetBool("Follow", isFollow);
-        //anim.SetBool("Death", isDeath);
+        anim.SetBool("Walk", isWalk);
+        anim.SetBool("Chase", isChase);
+        anim.SetBool("Follow", isFollow);
+        anim.SetBool("Death", isDeath);
     }
 
     void SwitchStates()
@@ -220,7 +220,7 @@ public class EnemyController : MonoBehaviour
         transform.LookAt(attackTarget.transform);
         if (TargetInAttackRange())
         {
-
+            //anim.Set
         }
         if (TargetInShootRange())
         {
@@ -285,6 +285,11 @@ public class EnemyController : MonoBehaviour
             shotData.launchSource = LaunchSource.enemy;
             shotData.affectDamage = characterStats.attackData.damage;
         }
+    }
+
+    void MeleeAttack()
+    {
+
     }
 
 
