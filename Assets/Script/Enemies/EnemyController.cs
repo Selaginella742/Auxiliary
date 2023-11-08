@@ -283,6 +283,7 @@ public class EnemyController : MonoBehaviour
         {
             shotData.launchSource = LaunchSource.enemy;
             shotData.affectDamage = characterStats.attackData.damage;
+            shotData.speed = 80;
         }
     }
 

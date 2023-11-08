@@ -5,12 +5,7 @@ using UnityEngine;
 public class Hurtbox : MonoBehaviour
 {
    public int damage;
-   private Collider collider;
 
-   void Awake()
-    {
-        collider = GetComponent<Collider>();
-    }
 
     void OnTriggerEnter(Collider other)
     {
