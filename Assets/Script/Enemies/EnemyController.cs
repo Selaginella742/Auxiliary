@@ -87,9 +87,9 @@ public class EnemyController : MonoBehaviour
 
     void SwitchAnimation()
     {
-        anim.SetBool("Walk", isWalk);
-        anim.SetBool("Chase", isChase);
-        anim.SetBool("Follow", isFollow);
+        //anim.SetBool("Walk", isWalk);
+        //anim.SetBool("Chase", isChase);
+        //anim.SetBool("Follow", isFollow);
         //anim.SetBool("Death", isDeath);
     }
 
