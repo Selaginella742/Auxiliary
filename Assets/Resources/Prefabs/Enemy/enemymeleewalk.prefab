@@ -275,6 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988d8c774cc94a8489ec478deb568807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPrefab: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+  attackSoundPrefab: {fileID: 1354300928873264297, guid: 54084422ef9e9cf4badaaca7a8a35e2f, type: 3}
 --- !u!4 &6015842261186908524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 570401731a7b2994db16f8a70def81cf, type: 3}
@@ -321,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGuard: 1
   bulletPrefab: {fileID: 0}
+  shootEffect: {fileID: 0}
   gunModel: {fileID: 1484838468358700303}
   lookAtTime: 2
   explosionEffect: {fileID: 167558, guid: a11dc34cafe3dfd4facb59cfb4e72de8, type: 3}
