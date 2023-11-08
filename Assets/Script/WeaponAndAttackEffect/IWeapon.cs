@@ -44,16 +44,15 @@ public abstract class IWeapon : MonoBehaviour
     }
     protected virtual void Update()
     {
-        if (!InteractWithUI())
-        {
-            CalculateCooldown(Time.deltaTime);
+        
+        CalculateCooldown(Time.deltaTime);
 
-            UpdateLocation();
-            damageData.UpdateData();
+        UpdateLocation();
+        damageData.UpdateData();
 
 
-            Attack();
-        }
+        Attack();
+        
     }
 
     /**

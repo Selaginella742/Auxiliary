@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myBag: {fileID: 16008364}
-  player: {fileID: 0}
+  player: {fileID: 1633802525}
 --- !u!114 &33353697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11356,7 +11356,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6216507305410497726, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
   m_PrefabInstance: {fileID: 1633802524}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1633802525}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6c9d12cba6ae834a92ca0dca2eea909, type: 3}
@@ -24688,6 +24688,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
+--- !u!1 &1633802525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3574371556098074603, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
+  m_PrefabInstance: {fileID: 1633802524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1636613886
 PrefabInstance:
   m_ObjectHideFlags: 0

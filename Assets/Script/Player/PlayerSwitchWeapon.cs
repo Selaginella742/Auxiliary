@@ -35,6 +35,7 @@ public class PlayerSwitchWeapon : MonoBehaviour
         }
 
         weapons[weaponIndex].SetActive(true);
+        UpdateWeaponToStat();
     }
 
     void Update()
@@ -42,9 +43,13 @@ public class PlayerSwitchWeapon : MonoBehaviour
         int newWeapon = weaponIndex;
 
         if (handSide == HandSide.Right)//check if is  right hand or left hand, and read the corresponding index
+        {
             newWeapon = playerData.rightWeaponIndex;
+        }
         else if (handSide == HandSide.Left)
+        {
             newWeapon = playerData.leftWeaponIndex;
+        }
         
         if (newWeapon != weaponIndex)
             StartCoroutine(SwitchWeapon(newWeapon));
@@ -67,11 +72,25 @@ public class PlayerSwitchWeapon : MonoBehaviour
 
                 weapons[i].GetComponentInChildren<IWeapon>().enabled = true;
                 break;
-            } 
+            }
+
+        UpdateWeaponToStat();
     }
 
     public IWeapon CheckCurrentWeapon() 
     {
         return weapons[weaponIndex].GetComponentInChildren<IWeapon>();
+    }
+
+    public void UpdateWeaponToStat() 
+    {
+        if (handSide == HandSide.Left)
+        {
+            playerData.leftWeapon = CheckCurrentWeapon();
+        }
+        else
+        {
+            playerData.rightWeapon = CheckCurrentWeapon();
+        }
     }
 }

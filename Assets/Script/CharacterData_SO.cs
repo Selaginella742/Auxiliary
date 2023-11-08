@@ -27,8 +27,10 @@ public class CharacterData_SO : ScriptableObject
     [Tooltip("This controls which weapon the player is carrying at the left hand")]
     [Range(0, 2)]
     public int leftWeaponIndex;
+    [HideInInspector] public IWeapon leftWeapon;
     [Tooltip("This controls which weapon the player is carrying at the right hand")]
     [Range(0, 2)]
     public int rightWeaponIndex;
-    
+    [HideInInspector] public IWeapon rightWeapon;
+
 }

@@ -16,13 +16,17 @@ public class WalkingState : IState
 
     public void OnEnter()
     {
+        player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<PlayerRotation>().enabled = true;
     }
 
     public void OnExit()
     {
-
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerRotation>().enabled = false;
+        player.GetComponent<CharacterController>().enabled = false;
     }
 
     public void OnUpdate()

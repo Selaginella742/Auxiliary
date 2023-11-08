@@ -20,6 +20,8 @@ public class WeaponIconDisplay : MonoBehaviour
         playerStats = player.GetComponent<CharacterStats>();
         PlayerSwitchWeapon[] holders = player.GetComponentsInChildren<PlayerSwitchWeapon>();
 
+        
+
         //查找是否为右手，是则返回右手holder，否则返回左手holder
         foreach (var holder in holders)
         {
@@ -34,6 +36,9 @@ public class WeaponIconDisplay : MonoBehaviour
 
     void Update()
     {
+        print(playerStats.characterData.leftWeapon);
+        print(playerStats.characterData.rightWeapon);
+
         var currentWeapon = currentHolder.CheckCurrentWeapon();
 
         currentIcon.sprite = currentWeapon.damageData.icon;
