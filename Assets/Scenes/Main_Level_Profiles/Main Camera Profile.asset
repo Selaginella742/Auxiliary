@@ -61,7 +61,7 @@ MonoBehaviour:
     value: 1
   pixelScaleX:
     overrideState: 1
-    value: 0.6
+    value: 0.45
   pixelScaleY:
     overrideState: 1
-    value: 0.6
+    value: 0.45
