@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9222408220078636326}
   - component: {fileID: 9222408220079603686}
   - component: {fileID: 799392056015776303}
+  - component: {fileID: 8000838505453742455}
   m_Layer: 0
   m_Name: Pallet Variation 06
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 18.820007, y: 38.908756, z: -33.649666}
-  m_LocalScale: {x: 12.240168, y: 12.240168, z: 12.240168}
+  m_LocalScale: {x: 12, y: 12, z: 12}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9222408218295411449}
@@ -109,6 +110,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.561902, y: 0.19838908, z: 1.5239612}
   m_Center: {x: 0.7777127, y: 0.09919171, z: 0.75671333}
+--- !u!208 &8000838505453742455
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222408220077596966}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.781, y: 0.09900001, z: 0.762}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.77800006, y: 0.09900001, z: 0.757}
+  m_TimeToStationary: 0.5
 --- !u!1001 &9222408218295285881
 PrefabInstance:
   m_ObjectHideFlags: 0

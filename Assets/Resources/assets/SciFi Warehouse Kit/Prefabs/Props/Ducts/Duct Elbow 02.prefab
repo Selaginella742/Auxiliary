@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5527105495727881662}
   - component: {fileID: 2272259806573347143}
   - component: {fileID: 7292232714277131717}
+  - component: {fileID: 3756053545466552906}
   m_Layer: 0
   m_Name: Duct Elbow 02
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25.580791, y: 25.580791, z: 25.580791}
+  m_LocalScale: {x: 20.38073, y: 20.38073, z: 20.38073}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 8e46cfab629ec8249b48a57b735235dd, type: 3}
+--- !u!208 &3756053545466552906
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555181138824525211}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.661, y: 0.32700002, z: 0.66400003}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.335, y: 0, z: -0.66400003}
+  m_TimeToStationary: 0.5

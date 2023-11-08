@@ -64,7 +64,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 53.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3686488, y: 1.3686488, z: 1.3686488}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5603961843049808528}
@@ -83,7 +83,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2.97
-  m_Speed: 3.5
+  m_Speed: 15
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -107,13 +107,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e23ca81f08c7404b962885cf5f778d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGuard: 0
+  isGuard: 1
   bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
   gunModel: {fileID: 8678676394747741497}
   lookAtTime: 2
   explosionEffect: {fileID: 167558, guid: a11dc34cafe3dfd4facb59cfb4e72de8, type: 3}
   sightRadius: 60
-  patrolRange: 60
+  patrolRange: 5
 --- !u!114 &7381854659862419607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   isDone: 0
   lootItems:
   - item: {fileID: 7014733683165510287, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
-    weight: 1
+    weight: 0.1
 --- !u!114 &8917235030506620578
 MonoBehaviour:
   m_ObjectHideFlags: 0

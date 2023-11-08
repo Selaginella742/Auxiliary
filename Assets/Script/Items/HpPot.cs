@@ -7,6 +7,7 @@ public class HpPot : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("ItemPickUp");
             other.GetComponent<CharacterStats>().characterData.currentHealth += 20;
             if (other.GetComponent<CharacterStats>().characterData.currentHealth > other.GetComponent<CharacterStats>().characterData.maxHealth)
                 other.GetComponent<CharacterStats>().characterData.currentHealth = other.GetComponent<CharacterStats>().characterData.maxHealth;

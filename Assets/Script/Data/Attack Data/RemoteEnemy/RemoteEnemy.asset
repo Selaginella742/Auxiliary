@@ -17,4 +17,4 @@ MonoBehaviour:
   criticalMultiplier: 0
   criticalChance: 0
   attackRange: 0
-  shootRange: 20
+  shootRange: 40
