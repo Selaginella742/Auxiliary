@@ -82,6 +82,8 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
 
         playerData.currentSpeed -= playerData.currentDashSpeed;
+        FindObjectOfType<AudioManager>().Play("Dash");
+
     }
 
     public float GetCurrentCool() 

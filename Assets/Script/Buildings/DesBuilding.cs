@@ -29,6 +29,7 @@ public class DesBuilding : MonoBehaviour
     {
         if (characterStats.characterData.currentHealth <= 0)
         {
+            FindObjectOfType<AudioManager>().Play("EnemyDeath");
             Destroy(gameObject);
             if (isExplosion && !isBoom)
             {
@@ -37,7 +38,6 @@ public class DesBuilding : MonoBehaviour
                 hurtArea = Instantiate(hurtBox, transform.position, Quaternion.identity);
                 Destroy(boomEffect, 2.0f);
                 Destroy(hurtArea, 0.3f);
-                FindObjectOfType<AudioManager>().Play("EnemyDeath");
             }
         }
     }

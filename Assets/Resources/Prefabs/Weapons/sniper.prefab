@@ -54,7 +54,7 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: d735365d61af9c74fa6c7cff226bd684, type: 3}
     name: 
     description: 
-    coolDown: 0.5
+    coolDown: 1.5
     damage: 25
     criticalMultiplier: 0
     criticalChance: 0

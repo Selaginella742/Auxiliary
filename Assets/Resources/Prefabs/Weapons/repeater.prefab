@@ -87,8 +87,8 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: 45f687d8f3ec20d4282b5c9a305c8fd3, type: 3}
     name: Repeater
     description: 
-    coolDown: 2
-    damage: 25
+    coolDown: 1
+    damage: 15
     criticalMultiplier: 0
     criticalChance: 0
     bulletSpeed: 150

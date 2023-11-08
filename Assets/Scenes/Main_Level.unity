@@ -155,7 +155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1345472281742655184, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3808.2253
+      value: -3815.4
       objectReference: {fileID: 0}
     - target: {fileID: 1345472281742655184, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -467,8 +467,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8117ad03e7d28324f97b6eddfdcd1e1d, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 5b5984eeff54a934994cb183dab04585, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -935,7 +935,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Criti. Rate: 0'
+  m_Text: 'Crit Rate: 0'
 --- !u!222 &28535349
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3314,7 +3314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 497, y: -396}
+  m_AnchoredPosition: {x: 497, y: -386.42}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122602148
@@ -3337,8 +3337,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6a80f4e6cff1f344ab8fe27bc2843a7, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e324bc35faadee747be9d174752660fb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3660,7 +3660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Speed:10
+  m_Text: 'Speed: 10'
 --- !u!222 &135678441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3867,7 +3867,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Defence:10
+  m_Text: 'Defense: 10'
 --- !u!222 &167139658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8477,7 +8477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
       propertyPath: sounds.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
       propertyPath: sounds.Array.data[1].clip
@@ -8512,11 +8512,63 @@ PrefabInstance:
       value: Sniper
       objectReference: {fileID: 0}
     - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cb2ce6446139d9447a21394c7ee3fe33, type: 3}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[5].name
+      value: ItemPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bb086e29e5fcc34f9ab6428c5a76433, type: 3}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: Dash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d4851580ed6d9a4d9449045651f4576, type: 3}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: RepeaterEquip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bb086e29e5fcc34f9ab6428c5a76433, type: 3}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[8].name
+      value: Dash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
       propertyPath: sounds.Array.data[1].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
       propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[5].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[6].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[7].pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
@@ -8534,6 +8586,22 @@ PrefabInstance:
     - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
       propertyPath: sounds.Array.data[4].volume
       value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[5].volume
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069128647381168639, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
+      propertyPath: sounds.Array.data[8].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8145933856622322403, guid: 7d5556ebe392085438faddd20f95c264, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10339,7 +10407,7 @@ RectTransform:
   m_GameObject: {fileID: 627081782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7665353, y: 0.1610398, z: 1}
+  m_LocalScale: {x: 1.74, y: 0.1610398, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 125446634}
@@ -10486,6 +10554,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5725000371507048362, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
   m_PrefabInstance: {fileID: 629911219}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &635620777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 635620778}
+  - component: {fileID: 635620780}
+  - component: {fileID: 635620779}
+  m_Layer: 5
+  m_Name: tutorial tips (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &635620778
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635620777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 56.600002}
+  m_LocalScale: {x: 0.056772325, y: 0.062537864, z: 0.071791}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1612860480}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8.500001, y: 18.5}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &635620779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635620777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
+    m_FontSize: 48
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 48
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "This is an item \nwalk over it to pick it up\nPress tab to access \nyour
+    inventory"
+--- !u!222 &635620780
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635620777}
+  m_CullTransparentMesh: 1
 --- !u!1001 &636758133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13650,9 +13798,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Press [W A S D] to move
+  m_Text: 'Use [W A S D] to move
 
-    Press [Left Shift] to dash'
+    Press [Shift] to dash'
 --- !u!222 &874232636
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15975,7 +16123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -361.28662, y: -458.55627}
+  m_AnchoredPosition: {x: -361.28662, y: -445.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995693661
@@ -15998,8 +16146,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f4dc7bd10a451142a52da3094c23e3a, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: e324bc35faadee747be9d174752660fb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -16965,7 +17113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Shoot Cool: 2.5'
+  m_Text: 'Shot Cool: 2.5'
 --- !u!222 &1053682902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17221,7 +17369,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Criti. Chance: 0'
+  m_Text: 'Crit Chance: 0'
 --- !u!222 &1068074553
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20759,7 +20907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.9, y: 18.7}
+  m_AnchoredPosition: {x: 14.8, y: 15.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371477113
@@ -20795,12 +20943,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Shoot and Destroy it
+  m_Text: 'Shoot with left/right mouse
 
-    By the wepaon you just got
-
-    Press[left/right
-    mouse]'
+    button to destroy the wall'
 --- !u!222 &1371477114
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21608,7 +21753,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420226068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 39.9}
+  m_LocalPosition: {x: 0, y: 0, z: 32.72544}
   m_LocalScale: {x: 0.056772325, y: 0.062537864, z: 0.071791}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21652,7 +21797,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Here is a Treasure Box[\u2193\u2193\u2193]\nPress [F] to open it"
+  m_Text: "This is a Treasure Box [\u2193\u2193\u2193]\nPress [F] to open it"
 --- !u!222 &1420226071
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24084,7 +24229,7 @@ GameObject:
   - component: {fileID: 1612860478}
   - component: {fileID: 1612860477}
   m_Layer: 5
-  m_Name: HealthBarCanvas
+  m_Name: TutorialTipCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24167,6 +24312,7 @@ RectTransform:
   m_Children:
   - {fileID: 874232634}
   - {fileID: 1420226069}
+  - {fileID: 635620778}
   - {fileID: 1371477112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25928,14 +26074,14 @@ RectTransform:
   m_GameObject: {fileID: 1777480508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.2391, y: 8.2391, z: 8.2391}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 6.3, y: 6.3, z: 6.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 16008365}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 787, y: 555}
+  m_AnchoredPosition: {x: -754.5, y: 513.1}
   m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777480510
@@ -31152,7 +31298,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4537502286754259567, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.516346
+      value: 13.3
       objectReference: {fileID: 0}
     - target: {fileID: 4537502286754259567, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31160,7 +31306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4537502286754259567, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.213
+      value: 55.8
       objectReference: {fileID: 0}
     - target: {fileID: 4537502286754259567, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
       propertyPath: m_LocalRotation.w
