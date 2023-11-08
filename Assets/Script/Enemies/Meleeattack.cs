@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Meleeattack : MonoBehaviour
 {
+    public GameObject hitPrefab;
+    public GameObject attackSoundPrefab;
     private CharacterStats characterStats;
     private int attack;
 
@@ -19,6 +21,10 @@ public class Meleeattack : MonoBehaviour
         if (target != null)
         {
             target.TakeDamage(attack, target);
+            GameObject hitIns = Instantiate(hitPrefab, transform.position, Quaternion.identity);
+            Destroy(hitIns, 1.0f);
+            GameObject hitSound = Instantiate(attackSoundPrefab, transform.position, Quaternion.identity);
+            Destroy(hitSound, 1.0f);
         }
     }
 }
