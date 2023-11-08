@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TreasureBox : MonoBehaviour
 {
-    public TreasureSpawner weaponDropList;
+    [SerializeField]TreasureSpawner weaponDropList;
     void Start()
     {
         weaponDropList.InitilizeSpawner();
