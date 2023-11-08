@@ -31,6 +31,17 @@ public class WalkingState : IState
 
     public void OnUpdate()
     {
-        
+        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") ==0)
+        {
+            player.GetComponentInChildren<Animator>().SetBool("Walk", false);
+        }
+
+        else
+        {
+            player.GetComponentInChildren<Animator>().SetBool("Walk", true);
+        }
+
+
+
     }
 }
