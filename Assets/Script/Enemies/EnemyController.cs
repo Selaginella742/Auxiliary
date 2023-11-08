@@ -26,6 +26,7 @@ public class EnemyController : MonoBehaviour
     bool isFollow; //To determine if attack or continue chasing. Be careful when we make animation.
     bool isDeath;
     public GameObject bulletPrefab;
+    public GameObject shootEffect;   //远程敌人使用的枪口发射效果
     public GameObject gunModel;
     public float lookAtTime; //The time enemy will wait in each patrol movement 
     private float remainLookAtTime;
@@ -276,8 +277,11 @@ public class EnemyController : MonoBehaviour
 
     void Shoot()
     {
+        GameObject effect = Instantiate(shootEffect, gunModel.transform.position + gunModel.transform.forward*4, transform.rotation);
         GameObject shot = Instantiate(bulletPrefab, gunModel.transform.position, transform.rotation);
         var shotData = shot.GetComponent<IBullet>();
+
+        Destroy(effect, 0.2f);
 
         if (shotData != null)
         {
