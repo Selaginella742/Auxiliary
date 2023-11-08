@@ -27,7 +27,7 @@ public class LoopSpawner : MonoBehaviour
             if(currentValue <= lootItems[i].weight)
             {
                 GameObject obj = Instantiate(lootItems[i].item);
-                obj.transform.position = new Vector3(transform.position.x, 1, transform.position.z);
+                obj.transform.position = new Vector3(transform.position.x, 2, transform.position.z);
             }
         }
     }
