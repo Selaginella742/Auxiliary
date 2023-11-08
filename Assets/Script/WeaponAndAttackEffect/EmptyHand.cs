@@ -6,7 +6,11 @@ public class EmptyHand : IWeapon
 {
     protected override void AttackMode(){ }
 
-    protected override void Start(){ }
+    protected override void Start()
+    {
+        damageData.UpdateData();
+        currentCooldown = damageData.buffedCooldown;
+    }
 
     protected override void Update(){ }
 }

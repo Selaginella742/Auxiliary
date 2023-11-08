@@ -84,6 +84,9 @@ MonoBehaviour:
     bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
     shootSound: {fileID: 8300000, guid: b617921e0278bb046a833acbc288ddca, type: 3}
     shootEffect: {fileID: 6415271522330289220, guid: b57a891dc403a7644a444a33a4ff7181, type: 3}
+    icon: {fileID: 21300000, guid: 45f687d8f3ec20d4282b5c9a305c8fd3, type: 3}
+    name: Repeater
+    description: 
     coolDown: 2
     damage: 25
     criticalMultiplier: 0

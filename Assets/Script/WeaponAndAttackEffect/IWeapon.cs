@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -18,7 +19,6 @@ public abstract class IWeapon : MonoBehaviour
     protected Quaternion launchDir;
     protected int handPos; //determine right or left hand, right for 1 and left for 0
     protected GameObject effectIns;
-    protected AudioSource shootAudio;
 
     protected void Awake() 
     {
@@ -29,10 +29,11 @@ public abstract class IWeapon : MonoBehaviour
         else
             handPos = 2;
 
-        shootAudio = GetComponent<AudioSource>();
+        damageData.UpdateData();
     }
     protected virtual void Start()
     {
+        
         currentCooldown = damageData.buffedCooldown;
         launchPos = transform.position;
         launchDir = transform.rotation;
@@ -107,6 +108,11 @@ public abstract class IWeapon : MonoBehaviour
         effectIns.SetActive(false);
     }
 
+    public float CheckCurrentCooldown() 
+    {
+        return currentCooldown;
+    }
+
     /**
      * The function of the weapon
      */
@@ -125,6 +131,9 @@ public class WeaponData
     public GameObject bulletPrefab;
     public AudioClip shootSound;
     public GameObject shootEffect;
+    public Sprite icon;
+    public String name;
+    public String description;
 
     [Header("Damage Variables")]
     [Min(0f)]
@@ -189,7 +198,7 @@ public class WeaponData
      */
     public bool CheckCritical()
     {
-        float critialLimit = Random.value;
+        float critialLimit = UnityEngine.Random.value;
 
         if (critialLimit <= buffedCriticalChance)
             return true;

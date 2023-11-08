@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
+
+public enum HandSide 
+{
+    Left,
+    Right,
+}
 
 public class PlayerSwitchWeapon : MonoBehaviour
 {
+    public HandSide handSide;
     public WeaponList_SO weaponList;
     CharacterData_SO playerData;
 
@@ -33,9 +41,9 @@ public class PlayerSwitchWeapon : MonoBehaviour
     {
         int newWeapon = weaponIndex;
 
-        if (this.gameObject.name == "RightWeaponHolder")//check if is  right hand or left hand, and read the corresponding index
+        if (handSide == HandSide.Right)//check if is  right hand or left hand, and read the corresponding index
             newWeapon = playerData.rightWeaponIndex;
-        else if (this.gameObject.name == "LeftWeaponHolder")
+        else if (handSide == HandSide.Left)
             newWeapon = playerData.leftWeaponIndex;
         
         if (newWeapon != weaponIndex)
@@ -60,5 +68,10 @@ public class PlayerSwitchWeapon : MonoBehaviour
                 weapons[i].GetComponentInChildren<IWeapon>().enabled = true;
                 break;
             } 
+    }
+
+    public IWeapon CheckCurrentWeapon() 
+    {
+        return weapons[weaponIndex].GetComponentInChildren<IWeapon>();
     }
 }
