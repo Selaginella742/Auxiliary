@@ -4,26 +4,41 @@ using UnityEngine;
 
 public class TreasureTrap : MonoBehaviour
 {
+    public float spawnRange;
     [SerializeField] TreasureSpawner weaponDropList;
     [SerializeField] EnemiesSpawner enemiesSpawnList;
+    bool canBeOpened;
 
     void Start()
     {
         weaponDropList.InitilizeSpawner();
+        canBeOpened = false;
     }
 
-    private void OnTriggerStay(Collider other)
+    void Update()
     {
-        Debug.Log("trigger enter");
-        if (other.gameObject.tag == "Player")
+        if (canBeOpened)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
                 weaponDropList.SpawnLoot(transform.position, transform.rotation);
-                enemiesSpawnList.SpawnEnemies(transform.position, transform.rotation, 0f);
+                enemiesSpawnList.SpawnEnemies(transform.position, transform.rotation, spawnRange);
                 Destroy(this.gameObject);
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canBeOpened = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        canBeOpened = false;
     }
 }
 
