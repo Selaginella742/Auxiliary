@@ -77,11 +77,14 @@ public class PickableWeapon : MonoBehaviour
                     playerStat.leftWeaponIndex = weaponIndex;
                     Destroy(weaponInfoUIIns);
                     Destroy(this.gameObject);
-                } else if (Input.GetMouseButton(1))
+                    FindObjectOfType<AudioManager>().Play("RepeaterEquip");
+                }
+                else if (Input.GetMouseButton(1))
                 {
                     playerStat.rightWeaponIndex = weaponIndex;
                     Destroy(this.gameObject);
                     Destroy(weaponInfoUIIns);
+                    FindObjectOfType<AudioManager>().Play("RepeaterEquip");
                 }
             }
 
