@@ -5,15 +5,16 @@ using UnityEngine;
 public class TreasureBox : MonoBehaviour
 {
     [SerializeField]TreasureSpawner weaponDropList;
+    bool canBeOpened;
     void Start()
     {
         weaponDropList.InitilizeSpawner();
+        canBeOpened = false;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        Debug.Log("trigger enter");
-        if (other.gameObject.tag == "Player")
+        if (canBeOpened)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -21,6 +22,19 @@ public class TreasureBox : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            canBeOpened = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        canBeOpened = false;
     }
 }
 
