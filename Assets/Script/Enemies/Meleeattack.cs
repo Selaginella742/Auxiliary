@@ -4,28 +4,15 @@ using UnityEngine;
 
 public class Meleeattack : MonoBehaviour
 {
-    bool isAttack;
-    private Animator anim;
-    private Collider collision;
     private CharacterStats characterStats;
     private int attack;
+    private Collider collider;
+
     void Start()
     {
-        collision = GetComponent<Collider>();
         characterStats = GetComponentInParent<CharacterStats>();
         attack = characterStats.attackData.damage;
-        anim = GetComponent<Animator>();
-    }
-
-    void OnAttack()
-    {
-        anim.SetBool("Attack", isAttack);
-        collision.enabled = true;
-    }
-
-    void Update()
-    {
-        OnAttack();
+        collider = GetComponentInParent<Collider>();
     }
 
     void OnTriggerEnter(Collider other)

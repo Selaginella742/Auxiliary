@@ -220,7 +220,7 @@ public class EnemyController : MonoBehaviour
         transform.LookAt(attackTarget.transform);
         if (TargetInAttackRange())
         {
-            //anim.Set
+            anim.SetTrigger("Attack");
         }
         if (TargetInShootRange())
         {
@@ -287,9 +287,14 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void MeleeAttack()
+    void MeleeOn()
     {
+        gunModel.GetComponent<Collider>().enabled = true;
+    }
 
+    void MeleeOff()
+    {
+        gunModel.GetComponent<Collider>().enabled = false;
     }
 
 

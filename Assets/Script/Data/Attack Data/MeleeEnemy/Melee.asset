@@ -16,5 +16,5 @@ MonoBehaviour:
   damage: 5
   criticalMultiplier: 0
   criticalChance: 0
-  attackRange: 10
+  attackRange: 18
   shootRange: 0
