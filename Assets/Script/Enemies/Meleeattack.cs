@@ -6,13 +6,11 @@ public class Meleeattack : MonoBehaviour
 {
     private CharacterStats characterStats;
     private int attack;
-    private Collider collider;
 
     void Start()
     {
         characterStats = GetComponentInParent<CharacterStats>();
         attack = characterStats.attackData.damage;
-        collider = GetComponentInParent<Collider>();
     }
 
     void OnTriggerEnter(Collider other)
