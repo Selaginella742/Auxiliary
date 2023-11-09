@@ -20,6 +20,8 @@ public class TreasureBox : MonoBehaviour
             {
                 weaponDropList.SpawnLoot(transform.position, transform.rotation);
                 Destroy(this.gameObject);
+                FindObjectOfType<AudioManager>().Play("Treasure");
+
             }
         }
     }
