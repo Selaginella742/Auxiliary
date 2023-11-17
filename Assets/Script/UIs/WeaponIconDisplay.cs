@@ -36,8 +36,6 @@ public class WeaponIconDisplay : MonoBehaviour
 
     void Update()
     {
-        print(playerStats.characterData.leftWeapon);
-        print(playerStats.characterData.rightWeapon);
 
         var currentWeapon = currentHolder.CheckCurrentWeapon();
 

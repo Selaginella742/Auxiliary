@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,25 +8,27 @@ public class DeathState : IState
 {
     PlayerFSM fsm;
     GameObject player;
+    float delay = 2.0f;
 
     public DeathState(PlayerFSM fsm, GameObject player)
     {
         this.fsm = fsm;
         this.player = player;
+        delay = 2.0f;
     }
 
-    void IState.OnEnter()
+    public void OnEnter()
     {
         
     }
 
-    void IState.OnExit()
+    public void OnExit()
     {
         SceneManager.LoadScene("Menu");
     }
 
-    void IState.OnUpdate()
+    public void OnUpdate()
     {
-        
+        delay -= Time.deltaTime;
     }
 }
