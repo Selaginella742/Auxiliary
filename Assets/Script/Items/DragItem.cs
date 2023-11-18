@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(ItemUI))]
 public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public ContainerUI containerUI;
+    public GameObject confirmUI;
     ItemUI currentItemUI;
     SlotHolder currentHolder;
     SlotHolder targetHolder;
@@ -23,6 +25,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         InventoryManager.Instance.currentDrag.originalParent = (RectTransform)transform.parent;
         //TODO:Record original data
         transform.SetParent(InventoryManager.Instance.dragCanvas.transform, true);
+        containerUI.slotIndex = currentHolder.itemUI.Index;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -65,11 +68,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         else
         {
             Debug.Log("Item Dragged Outside of Inventory");
-            
-            DragOutItem();
-            currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount = 0;
-            currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData = null;
-            currentHolder.itemUI.SetupItemUI(null, 0);
+
+            confirmUI.SetActive(true);
         }
         transform.SetParent(InventoryManager.Instance.currentDrag.originalParent);
 
@@ -77,6 +77,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         trans.offsetMax = -Vector2.one * 5;
         trans.offsetMin = Vector2.one * 5;
+
     }
 
     public void SwapItem()
@@ -88,14 +89,4 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         targetHolder.itemUI.Bag.items[targetHolder.itemUI.Index] = tempItem;
     }
 
-    void DragOutItem()
-    {
-        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.maxHealth -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemHealth * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
-        if (GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentHealth > GameObject.Find("Player").GetComponent<CharacterStats>().characterData.maxHealth)
-            GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentHealth = GameObject.Find("Player").GetComponent<CharacterStats>().characterData.maxHealth;
-        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDefence -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemDefence * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
-        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentSpeed -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemSpeed * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
-        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDashSpeed -= currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemDashSpeed * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
-        GameObject.Find("Player").GetComponent<CharacterStats>().characterData.currentDashCool += currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].ItemData.itemDashCool * currentHolder.itemUI.Bag.items[currentHolder.itemUI.Index].amount;
-    }
 }
