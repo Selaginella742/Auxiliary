@@ -166,8 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDone: 0
   lootItems:
-  - item: {fileID: 7014733683165510287, guid: 45c7329bfbfdbc1418c6ee12b8faef2c, type: 3}
-    weight: 0.1
+  - item: {fileID: 1238072829814605110, guid: 4dd5466e16248fa4a85cbb137104dee5, type: 3}
+    weight: 0.2
 --- !u!114 &8917235030506620578
 MonoBehaviour:
   m_ObjectHideFlags: 0
