@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(UITipFollow))]
 public class TreasureBox : MonoBehaviour
 {
     [SerializeField]TreasureSpawner weaponDropList;
     bool canBeOpened;
+    [HideInInspector]public GameObject UITip;
     void Start()
     {
         weaponDropList.InitilizeSpawner();
@@ -19,6 +21,7 @@ public class TreasureBox : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 weaponDropList.SpawnLoot(transform.position, transform.rotation);
+                Destroy(UITip);
                 Destroy(this.gameObject);
                 FindObjectOfType<AudioManager>().Play("Treasure");
 

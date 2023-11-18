@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe9e4d414ee368047bcb81bf03b93861, type: 3}
-  m_Name: HP
+  m_Name: Defen
   m_EditorClassIdentifier: 
   itemType: 1
-  itemName: Maurader Module H
-  itemIcon: {fileID: 21300000, guid: 2bae01139f89d1d44a8e8e4787dcd262, type: 3}
+  itemName: Maurader Module D
+  itemIcon: {fileID: 21300000, guid: 9713fd8bde2bca348901216914a783ac, type: 3}
   itemAmount: 1
   stackable: 0
   description: 'This module, stripped from a marauder mech,
 
     will increase your
-    Health by 10'
-  itemHealth: 10
-  itemDefence: 0
+    Defense by 1'
+  itemHealth: 0
+  itemDefence: 1
   itemSpeed: 0
   itemDashCool: 0
   itemDashSpeed: 0

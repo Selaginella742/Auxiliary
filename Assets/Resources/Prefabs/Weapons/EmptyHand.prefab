@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3155284724438048603}
   m_Layer: 0
-  m_Name: None
+  m_Name: EmptyHand
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

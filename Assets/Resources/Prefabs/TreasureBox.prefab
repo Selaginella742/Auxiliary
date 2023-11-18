@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5180314917632777194}
   - component: {fileID: 4246480545384697999}
   - component: {fileID: 4838672719078711158}
+  - component: {fileID: 4733187592872931032}
   m_Layer: 0
   m_Name: TreasureBox
   m_TagString: Untagged
@@ -93,6 +94,20 @@ MonoBehaviour:
     lootItems:
     - item: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
       weight: 1
+--- !u!114 &4733187592872931032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803146949095978509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724da32b22261b24885727c93ba1e56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UITemplate: {fileID: 8292678356317416813, guid: 1493585072529414e83bac813497ec01, type: 3}
+  displayImage: {fileID: 21300000, guid: 8003f06b1a546a746a1dd75665ea4be6, type: 3}
 --- !u!1 &6022273324630531131
 GameObject:
   m_ObjectHideFlags: 0

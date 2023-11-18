@@ -254,8 +254,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
@@ -276,7 +276,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 3.292096
   m_Height: 11.925865
@@ -438,7 +438,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3312558139179718314, guid: 1119aafbf71221c488981bb781de4454, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7895202627116018773}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1119aafbf71221c488981bb781de4454, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7518377423529281072}
   m_SourcePrefab: {fileID: 100100000, guid: 1119aafbf71221c488981bb781de4454, type: 3}
 --- !u!4 &287403113489307825 stripped
 Transform:
@@ -455,3 +458,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1119aafbf71221c488981bb781de4454, type: 3}
   m_PrefabInstance: {fileID: 5907142127552442855}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6717976078130810038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1119aafbf71221c488981bb781de4454, type: 3}
+  m_PrefabInstance: {fileID: 5907142127552442855}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7518377423529281072
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717976078130810038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 366c7d9e2eb1c5944a6d9b77929b9463, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -8,30 +8,44 @@ public class WalkingState : IState
     PlayerFSM fsm;
     GameObject player;
 
+    CharacterController playerControl;
+    PlayerMovement playerMovement;
+    PlayerRotation playerRotation;
+
     public WalkingState(PlayerFSM fsm, GameObject player)
     {
         this.fsm = fsm;
         this.player = player;
+
+        playerControl = player.GetComponent<CharacterController>();
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerRotation = player.GetComponent<PlayerRotation>();
+
     }
 
+    /**
+     * activate player's movement scripts
+     */
     public void OnEnter()
     {
-        player.GetComponent<CharacterController>().enabled = true;
-        player.GetComponent<PlayerMovement>().enabled = true;
-        player.GetComponent<PlayerRotation>().enabled = true;
+        playerControl.enabled = true;
+        playerMovement.enabled = true;
+        playerRotation.enabled = true;
     }
 
+    /**
+     * deactivate player's movement scripts
+     */
     public void OnExit()
     {
-        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<PlayerRotation>().enabled = false;
-        player.GetComponent<CharacterController>().enabled = false;
+        playerMovement.enabled = false;
+        playerRotation.enabled = false;
+        playerControl.enabled = false;
     }
 
     public void OnUpdate()
     {
-        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") ==0)
+        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") ==0)// check if there is input for moving, if so, play walking animation
         {
             player.GetComponentInChildren<Animator>().SetBool("Walk", false);
         }

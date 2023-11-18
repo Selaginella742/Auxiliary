@@ -27,7 +27,7 @@ public class PlayerSwitchWeapon : MonoBehaviour
         weapons = new GameObject[weaponList.weaponList.Count];
         for (int i = 0; i < weaponList.weaponList.Count; i++)
         {
-            GameObject weapon = Instantiate(weaponList.weaponList[i], transform); // create all weapons in the weaponlist
+            GameObject weapon = Instantiate(weaponList.weaponList[i].weapon, transform); // create all weapons in the weaponlist to the holder
             weapon.SetActive(false);
             weapon.GetComponentInChildren<IWeapon>().enabled = false;
             weapons[i] = weapon;
@@ -67,7 +67,12 @@ public class PlayerSwitchWeapon : MonoBehaviour
             if (i == newIndex)
             {
                 weapons[i].SetActive(true);
+                if (weaponIndex != 0)
+                {
+                    Instantiate(weaponList.weaponList[weaponIndex].drop, transform.position + 5*Vector3.down, transform.rotation);
+                }
                 weaponIndex = newIndex;
+                
                 yield return new WaitForSeconds(0.2f);
 
                 weapons[i].GetComponentInChildren<IWeapon>().enabled = true;

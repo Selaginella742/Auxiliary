@@ -7,23 +7,38 @@ public class GettingHitState : IState
     PlayerFSM fsm;
     GameObject player;
 
+    Rigidbody rb;
+    CapsuleCollider collider;
+
     public GettingHitState(PlayerFSM fsm, GameObject player) 
     {
         this.fsm = fsm;
         this.player = player;
-    }
 
+        rb = player.GetComponent<Rigidbody>();
+        collider = player.GetComponent<CapsuleCollider>();
+        
+    }
+    /**
+     * activate rigidbody's physics simulation
+     */
     public void OnEnter()
     {
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<CharacterController>().enabled = false;
+        rb.detectCollisions = true;
+        rb.isKinematic = false;
+        rb.velocity = Vector3.zero;
+        collider.enabled = true;
 
-        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
     }
 
+    /**
+     * deactivate rigidbody's physics simulation
+     */
     public void OnExit()
     {
-        player.GetComponent<CharacterController>().enabled = true;
+        rb.detectCollisions = false;
+        rb.isKinematic = true;
+        collider.enabled = false;
     }
 
     public void OnUpdate()

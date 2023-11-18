@@ -10,6 +10,7 @@ public enum StateType
     Death,
 }
 
+[RequireComponent(typeof(Rigidbody), typeof(PlayerMovement))]
 public class PlayerFSM : MonoBehaviour
 {
 
@@ -57,6 +58,9 @@ public class PlayerFSM : MonoBehaviour
         StartCoroutine(ImpulseCoroutine(impulse, forceMode, affectTime));
     }
 
+    /**
+     * private delay method that applys the impulse on the player
+     */
     private IEnumerator ImpulseCoroutine(Vector3 impulse, ForceMode forceMode, float affectTime) 
     {
         StateType origin = currentStateType;
@@ -72,7 +76,6 @@ public class PlayerFSM : MonoBehaviour
     public void GameOver() 
     {
         SwitchState(StateType.Death);
-        currentState.OnExit();
     }
 
 }

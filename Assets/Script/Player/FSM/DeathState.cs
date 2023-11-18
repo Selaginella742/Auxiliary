@@ -30,5 +30,10 @@ public class DeathState : IState
     public void OnUpdate()
     {
         delay -= Time.deltaTime;
+
+        if (delay <= 0) 
+        {
+            OnExit();
+        }
     }
 }
