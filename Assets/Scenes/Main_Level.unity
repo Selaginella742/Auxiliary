@@ -22091,6 +22091,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1530101824}
     m_Modifications:
+    - target: {fileID: 1426496650389428361, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: lootItems.Array.size
       value: 1
@@ -29742,6 +29746,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4955014381338650011, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5005860914501051374, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -29769,6 +29777,14 @@ PrefabInstance:
     - target: {fileID: 6748086499235893760, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748086499235893760, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748086499235893760, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7408829663442717382, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
       propertyPath: playerStats

@@ -220,8 +220,8 @@ public class EnemyController : MonoBehaviour
         transform.LookAt(attackTarget.transform);
         if (TargetInAttackRange())
         {
-            anim.SetTrigger("Attack");
             agent.isStopped = true;
+            anim.SetTrigger("Attack");
         }
         if (TargetInShootRange())
         {

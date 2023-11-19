@@ -148,6 +148,10 @@ PrefabInstance:
       value: enemymeleewalk
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 570401731a7b2994db16f8a70def81cf, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 570401731a7b2994db16f8a70def81cf, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
