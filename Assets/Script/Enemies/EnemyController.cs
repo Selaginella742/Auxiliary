@@ -221,10 +221,12 @@ public class EnemyController : MonoBehaviour
         if (TargetInAttackRange())
         {
             anim.SetTrigger("Attack");
+            agent.isStopped = true;
         }
         if (TargetInShootRange())
         {
             Shoot();
+            agent.isStopped = true;
             //anim.SetTrigger("Shoot");//Éä»÷¶¯»­
         }
     }
