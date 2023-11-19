@@ -22093,7 +22093,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1426496650389428361, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3263290900175782166, guid: b859406b3d62a6f438d7fee9f024cf22, type: 3}
       propertyPath: lootItems.Array.size
