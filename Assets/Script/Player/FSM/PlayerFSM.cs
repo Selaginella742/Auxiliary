@@ -53,6 +53,9 @@ public class PlayerFSM : MonoBehaviour
         return currentStateType;
     }
 
+    /**
+     * Apply a impulse on the player
+     */
     public void ApplyImpulse(Vector3 impulse, ForceMode forceMode, float affectTime)
     {
         StartCoroutine(ImpulseCoroutine(impulse, forceMode, affectTime));
@@ -73,6 +76,9 @@ public class PlayerFSM : MonoBehaviour
         SwitchState(origin);
     }
 
+    /**
+     * Call this method when the player reach 0 health and it will return to the start menu page
+     */
     public void GameOver() 
     {
         SwitchState(StateType.Death);

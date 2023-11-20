@@ -35,16 +35,15 @@ public abstract class IBullet : MonoBehaviour
 
     protected virtual void bulletMovement(float speed)
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * speed * Time.fixedDeltaTime);
     }
 
     protected virtual void OnCollisionEnter(Collision coli) 
     {
-        hitIns = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        hitIns = Instantiate(hitEffect, transform.position, Quaternion.identity);// create the bullet hit effect
         Destroy(hitIns, 1.0f);
 
         bulletSound = Instantiate(bulletEffect, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
         Destroy(bulletSound,1.0f);
 
 
