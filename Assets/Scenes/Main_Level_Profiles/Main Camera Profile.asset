@@ -86,8 +86,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   vignetteIndensity:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 1.42
   vignetteCenter:
     overrideState: 0
     value: {x: 0.5, y: 0.5}
