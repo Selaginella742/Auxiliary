@@ -19,3 +19,5 @@ MonoBehaviour:
     drop: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
   - weapon: {fileID: 24483405991098437, guid: 1647089b45c240745966486284375216, type: 3}
     drop: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
+  - weapon: {fileID: 4520859875332226581, guid: 53a61b8afe373804da3ccc74e8433390, type: 3}
+    drop: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}

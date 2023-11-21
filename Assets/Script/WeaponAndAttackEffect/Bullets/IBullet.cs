@@ -4,6 +4,7 @@ using UnityEngine;
 
 public enum LaunchSource {none, enemy, player}
 
+[RequireComponent(typeof(Rigidbody))]
 public abstract class IBullet : MonoBehaviour
 {
     public float speed;
@@ -24,7 +25,10 @@ public abstract class IBullet : MonoBehaviour
     void FixedUpdate()
     {
         bulletMovement(speed);
+    }
 
+    protected virtual void Update() 
+    {
         existTime -= Time.deltaTime;
 
         if (existTime <= 0)
@@ -40,17 +44,32 @@ public abstract class IBullet : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision coli) 
     {
+        print(coli.gameObject.layer);
+        if (coli.gameObject.layer != 2) 
+        {
+            HitEffect();
+
+            if (coli.gameObject.tag == "Enemy" && launchSource == LaunchSource.player)
+                effectOnCharacter(coli);
+            else if (coli.gameObject.tag == "Player" && launchSource == LaunchSource.enemy)
+                effectOnCharacter(coli);
+
+            HitReaction(coli); 
+        }
+    }
+    protected abstract void effectOnCharacter(Collision coli);
+
+    private void HitEffect() 
+    {
         hitIns = Instantiate(hitEffect, transform.position, Quaternion.identity);// create the bullet hit effect
         Destroy(hitIns, 1.0f);
 
         bulletSound = Instantiate(bulletEffect, transform.position, Quaternion.identity);
-        Destroy(bulletSound,1.0f);
-
-
-        if (coli.gameObject.tag == "Enemy" && launchSource == LaunchSource.player)
-            effectOnCharacter(coli);
-        else if(coli.gameObject.tag == "Player" && launchSource == LaunchSource.enemy)
-            effectOnCharacter(coli);
+        Destroy(bulletSound, 1.0f);
     }
-    protected abstract void effectOnCharacter(Collision coli);
+
+    protected virtual void HitReaction(Collision coli) 
+    {
+        Destroy(this.gameObject);
+    }
 }

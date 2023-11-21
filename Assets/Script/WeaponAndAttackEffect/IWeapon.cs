@@ -131,8 +131,6 @@ public class WeaponData
     public AudioClip shootSound;
     public GameObject shootEffect;
     public Sprite icon;
-    public String name;
-    public String description;
 
     [Header("Damage Variables")]
     [Min(0f)]

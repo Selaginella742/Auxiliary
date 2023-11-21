@@ -11,8 +11,13 @@ public class SniperBullet : IBullet
     [Tooltip("This variable controls the bounce frequency of the bullet")]
     public int bounce = 1;
 
-    private void Update()
+    /**
+     * sniper's bullet will increases damage through time
+     */
+    protected override void Update()
     {
+        base.Update();
+
         damageDelay -= Time.deltaTime;
 
         if (damageDelay <= 0)
@@ -21,10 +26,20 @@ public class SniperBullet : IBullet
         }
     }
 
-    protected override void OnCollisionEnter(Collision coli)
+    protected override void effectOnCharacter(Collision coli)
     {
-        base.OnCollisionEnter(coli);
+        CharacterStats enemyStats = coli.gameObject.GetComponent<CharacterStats>();
+        if (enemyStats != null)
+        {
+            enemyStats.TakeDamage(affectDamage, enemyStats);
+        }
+    }
 
+    /**
+     * sniper's bullet bounces when it hits the wall or it hasn't hitted the wall bounce(parameter) times
+     */
+    protected override void HitReaction(Collision coli)
+    {
         var hitNormal = coli.GetContact(0).normal;
 
         if (coli.gameObject.layer == 9)
@@ -39,15 +54,6 @@ public class SniperBullet : IBullet
             {
                 Destroy(this.gameObject);
             }
-        }
-    }
-
-    protected override void effectOnCharacter(Collision coli)
-    {
-        CharacterStats enemyStats = coli.gameObject.GetComponent<CharacterStats>();
-        if (enemyStats != null)
-        {
-            enemyStats.TakeDamage(affectDamage, enemyStats);
         }
     }
 }
