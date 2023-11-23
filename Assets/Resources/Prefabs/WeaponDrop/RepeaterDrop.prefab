@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3661697116961824411}
   - component: {fileID: 3977438900928300380}
   - component: {fileID: 5416444430098470124}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RepeaterDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,6 +135,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e1a8778f736487e4d878c58aefdc71cd, type: 3}
       propertyPath: m_Name
       value: DrumMagWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1a8778f736487e4d878c58aefdc71cd, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5480466589224334421, guid: e1a8778f736487e4d878c58aefdc71cd, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

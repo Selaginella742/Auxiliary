@@ -7,8 +7,8 @@ public enum LaunchSource {none, enemy, player}
 [RequireComponent(typeof(Rigidbody))]
 public abstract class IBullet : MonoBehaviour
 {
-    public float speed;
-    public float existTime;
+    public float speed = 30;
+    public float existTime = 5;
     public GameObject bulletEffect;
     private GameObject bulletSound;
     public GameObject hitEffect;

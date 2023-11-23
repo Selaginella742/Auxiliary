@@ -267,9 +267,9 @@ GameObject:
   - component: {fileID: 8353660460610090482}
   - component: {fileID: 5823577406907710758}
   - component: {fileID: 1583871549889961133}
-  - component: {fileID: -8975605157389509333}
+  - component: {fileID: 5709451346055426933}
   m_Layer: 2
-  m_Name: SniperBullet
+  m_Name: ShotgunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +340,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &-8975605157389509333
+--- !u!114 &5709451346055426933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -349,11 +349,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7470602929997290251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecf0b96b0207d441b03fe42f05847d3, type: 3}
+  m_Script: {fileID: 11500000, guid: a24d7e1f0900925428eddcb243d0c21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  existTime: 2
+  existTime: 5
   bulletEffect: {fileID: 1354300928873264297, guid: 54084422ef9e9cf4badaaca7a8a35e2f, type: 3}
   hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   launchSource: 0
@@ -361,6 +361,6 @@ MonoBehaviour:
   affectSpeed: 0
   affectTime: 0
   impulse: 0
-  damageDelay: 0.5
-  damageIncreaseStep: 1
-  bounce: 1
+  maximumIncrease: 15
+  range: 150
+  doubleCriticalPercent: 0.21
