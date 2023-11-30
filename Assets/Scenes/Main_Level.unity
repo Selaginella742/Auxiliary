@@ -185,6 +185,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[0].item
+      value: 
+      objectReference: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9312,11 +9316,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1990715786}
   m_SourcePrefab: {fileID: 100100000, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
---- !u!4 &426073938 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-  m_PrefabInstance: {fileID: 1366460813}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &428380329
 GameObject:
   m_ObjectHideFlags: 0
@@ -14610,14 +14609,14 @@ RectTransform:
   m_GameObject: {fileID: 648373135}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.04395636, y: 0.41800526, z: 0.18222356}
+  m_LocalScale: {x: 0.030746156, y: 0.29238212, z: 0.12745991}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 23732348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.68, y: 72.2}
+  m_AnchoredPosition: {x: -3.09, y: 59.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648373137
@@ -21324,14 +21323,14 @@ RectTransform:
   m_GameObject: {fileID: 965355543}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.043956358, y: 0.41800526, z: 0.18222357}
+  m_LocalScale: {x: 0.033464413, y: 0.31823158, z: 0.13872862}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1825631516}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.73, y: 72.2}
+  m_AnchoredPosition: {x: -2.76, y: 59.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &965355545
@@ -23650,9 +23649,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[0].item
       value: 
       objectReference: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[1].item
+      value: 
+      objectReference: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[2].item
+      value: 
+      objectReference: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[0].weight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[1].weight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[2].weight
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28992,67 +29015,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2452a5c2cd649a4db9eebcd16f7b155, type: 3}
---- !u!1001 &1366460813
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1623914425}
-    m_Modifications:
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.585263
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2932.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2349.223
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2489.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7403307423979001883, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8383991308911193178, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
-      propertyPath: m_Name
-      value: FireTrap (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
 --- !u!1 &1380686097
 GameObject:
   m_ObjectHideFlags: 0
@@ -34190,7 +34152,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 57200023}
-  - {fileID: 426073938}
   - {fileID: 578329787}
   - {fileID: 134225894}
   - {fileID: 1038001821}
@@ -37311,9 +37272,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[0].item
       value: 
-      objectReference: {fileID: 1238072829814605110, guid: 4dd5466e16248fa4a85cbb137104dee5, type: 3}
+      objectReference: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[1].item
+      value: 
+      objectReference: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[2].item
+      value: 
+      objectReference: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[1].weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[2].weight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43264,6 +43245,10 @@ PrefabInstance:
     - target: {fileID: 8383991308911193178, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
       propertyPath: m_Name
       value: FireTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906726230175456996, guid: d9d31aaf325ec014e9d4569617be8c6b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1491
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

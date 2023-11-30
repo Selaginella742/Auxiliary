@@ -20,6 +20,7 @@ public class ShowingInfoState : IState
 
         player.GetComponent<CharacterStats>().characterData.leftWeapon.enabled = false;
         player.GetComponent<CharacterStats>().characterData.rightWeapon.enabled = false;
+        Cursor.visible = true;
 
     }
 
@@ -27,6 +28,8 @@ public class ShowingInfoState : IState
     {
         player.GetComponent<CharacterStats>().characterData.leftWeapon.enabled = true;
         player.GetComponent<CharacterStats>().characterData.rightWeapon.enabled = true;
+
+        Cursor.visible = false;
     }
 
     public void OnUpdate()
