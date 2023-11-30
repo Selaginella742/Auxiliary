@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     
     public static bool GamePaused = false;
     public GameObject pauseMenuUI;
-
+    public PlayerFSM State;
 
     // Update is called once per frame
     void Update()
@@ -32,7 +32,8 @@ public class PauseMenu : MonoBehaviour
         //Stop time and pull up menu
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
- 
+        State.SwitchState(StateType.Walking);
+
 
         GamePaused = false;
     }
@@ -42,6 +43,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GamePaused = true;
+        State.SwitchState(StateType.ShowingInfo);
  
     }
     public void LoadMenu()
