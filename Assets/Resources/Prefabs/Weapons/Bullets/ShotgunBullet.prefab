@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  existTime: 5
+  existTime: 0.3
   bulletEffect: {fileID: 1354300928873264297, guid: 54084422ef9e9cf4badaaca7a8a35e2f, type: 3}
   hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   launchSource: 0
@@ -363,4 +363,3 @@ MonoBehaviour:
   impulse: 0
   maximumIncrease: 15
   range: 150
-  doubleCriticalPercent: 0.21

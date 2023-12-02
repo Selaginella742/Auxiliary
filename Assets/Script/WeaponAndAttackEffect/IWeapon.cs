@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public enum WeaponType {bullet, ray, meele};
+public enum WeaponType {bullet, heat};
 
 public abstract class IWeapon : MonoBehaviour
 {
@@ -19,6 +19,8 @@ public abstract class IWeapon : MonoBehaviour
     protected Quaternion launchDir;
     protected int handPos; //determine right or left hand, right for 1 and left for 0
     protected GameObject effectIns;
+
+    protected bool overheat = false; // variables for heat weapons
 
     protected void Awake() 
     {
@@ -40,6 +42,9 @@ public abstract class IWeapon : MonoBehaviour
 
         effectIns = Instantiate(damageData.shootEffect, launchPos, launchDir, transform);
         effectIns.SetActive(false);
+
+        currentCooldown = 0;
+        overheat = false;
 
     }
     protected virtual void Update()
@@ -87,15 +92,6 @@ public abstract class IWeapon : MonoBehaviour
             }
     }
 
-    bool InteractWithUI()
-    {
-        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
-        {
-            return true;
-        }
-        else return false;
-    }
-
     public void MuzzleFlash()
     {
         effectIns.SetActive(true);
@@ -110,6 +106,18 @@ public abstract class IWeapon : MonoBehaviour
     public float CheckCurrentCooldown() 
     {
         return currentCooldown;
+    }
+
+    /**
+     * check if this weapon overheats.  If the weapon is a bullet weapon, it will always returns false
+     */
+    public bool CheckWeaponOverheat() 
+    {
+        if (weaponType == WeaponType.heat)
+        {
+            return overheat;
+        }
+        return false;
     }
 
     /**
@@ -136,9 +144,13 @@ public class WeaponData
     [Min(0f)]
     public float coolDown;
     public int damage;
+    [Min(1)]
     public float criticalMultiplier;
+    [Range(0,1)]
     public float criticalChance;
     public float bulletSpeed;
+    [Min(0.1f)]
+    public float existTime;
 
    
 
@@ -182,10 +194,9 @@ public class WeaponData
     {
         float coreDamage = buffedDamage;
 
-        if (isCritical)
+        if (CheckCritical())
         {
             coreDamage *= buffedCriticalMulti;
-            Debug.Log("±©»÷£¡" + coreDamage);
         }
         return (int)coreDamage;
     }

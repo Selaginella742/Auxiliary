@@ -44,7 +44,6 @@ public abstract class IBullet : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision coli) 
     {
-        print(coli.gameObject.layer);
         if (coli.gameObject.layer != 2) 
         {
             HitEffect();

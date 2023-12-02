@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class WeaponIconDisplay : MonoBehaviour
 {
-    public HandSide handSide;
+    [SerializeField] HandSide handSide;
     PlayerSwitchWeapon currentHolder;
     CharacterStats playerStats;
-    public Image currentIcon;
-    public Slider cdMask;
+    [SerializeField] Image currentIcon;
+    [SerializeField]Slider cdMask;
 
     void Start()
     {
@@ -30,13 +30,10 @@ public class WeaponIconDisplay : MonoBehaviour
                 currentHolder = holder;
             }
         }
-        
-        
     }
 
     void Update()
     {
-
         var currentWeapon = currentHolder.CheckCurrentWeapon();
 
         currentIcon.sprite = currentWeapon.damageData.icon;

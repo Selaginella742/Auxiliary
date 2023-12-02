@@ -11,10 +11,6 @@ public class ShotgunBullet : IBullet
     [Tooltip("This variable controls the maximum range of the increased damage")]
     [Min(0)]
     public float range = 150f;
-    [Tooltip("This variable controls the probability of dealing double damage for each bullet")]
-    [Range(0,1)]
-    public float doubleCriticalPercent;
-
     Vector3 startPos;
 
     private void Start()
@@ -51,12 +47,6 @@ public class ShotgunBullet : IBullet
 
         // if the angle is larger than 90, meaning the enemy is facing side or away from the bullet
         if (angle >= 90)
-        {
-            resultDamage *= 2;
-        }
-
-        // if the random value reach the percentage, double the damage
-        if (Random.value < doubleCriticalPercent)
         {
             resultDamage *= 2;
         }
