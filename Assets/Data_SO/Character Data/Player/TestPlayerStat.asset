@@ -22,7 +22,7 @@ MonoBehaviour:
   currentHealth: 200
   currentDefence: 0
   currentSpeed: 20
-  currentDashCool: 0
+  currentDashCool: 2
   currentDashSpeed: 100
   leftWeaponIndex: 0
   leftWeapon: {fileID: 0}
