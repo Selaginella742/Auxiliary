@@ -89,6 +89,7 @@ MonoBehaviour:
     criticalMultiplier: 2
     criticalChance: 0.2
     bulletSpeed: 150
+    existTime: 0
     playerBuff: {fileID: 0}
     buffedCooldown: 0
     buffedDamage: 0
@@ -97,7 +98,7 @@ MonoBehaviour:
     buffedCriticalMulti: 0
     buffedBulletSpeed: 0
   launchAngle: 90
-  bulletAmount: 4
+  bulletAmount: 5
 --- !u!114 &5065328906077547001
 MonoBehaviour:
   m_ObjectHideFlags: 0

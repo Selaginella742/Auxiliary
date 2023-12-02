@@ -118,21 +118,21 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
+        value: 1
+        inSlope: -1.4621545
+        outSlope: -1.4621545
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.18400769
       - serializedVersion: 3
         time: 1
-        value: 0.8938291
-        inSlope: 1.9282272
-        outSlope: 1.9282272
+        value: 0.060495764
+        inSlope: -0.14042908
+        outSlope: -0.14042908
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.19207925
+        inWeight: 0.28131026
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -250,6 +250,7 @@ MonoBehaviour:
     criticalMultiplier: 0
     criticalChance: 0
     bulletSpeed: 0
+    existTime: 0
     playerBuff: {fileID: 0}
     buffedCooldown: 0
     buffedDamage: 0
