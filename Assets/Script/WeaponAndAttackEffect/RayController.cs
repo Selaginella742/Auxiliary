@@ -94,7 +94,7 @@ public class RayController : IWeapon
             if (target.tag == "Enemy") 
             {
                 var targetStat = target.GetComponent<CharacterStats>();
-                targetStat.TakeDamage(damageData.buffedDamage, targetStat);
+                targetStat.TakeDamage(damageData.CurrentDamage(), targetStat);
             }
             
         }
