@@ -80,17 +80,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 0
   damageData:
-    bulletPrefab: {fileID: 7470602929997290251, guid: 96792ec8e5e9bb140b337acb9840701f, type: 3}
+    defaultBulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
     shootSound: {fileID: 8300000, guid: b617921e0278bb046a833acbc288ddca, type: 3}
     shootEffect: {fileID: 6415271522330289220, guid: b57a891dc403a7644a444a33a4ff7181, type: 3}
-    icon: {fileID: 8628951121522814276, guid: 84356da12a8249c499e709f4475f15d8, type: 3}
+    icon: {fileID: 21300000, guid: efa34d488311f9641861ae7ef65d45ef, type: 3}
     coolDown: 1
     damage: 15
     criticalMultiplier: 2
     criticalChance: 0.2
     bulletSpeed: 150
     existTime: 0
-    playerBuff: {fileID: 0}
+    bulletPrefab: {fileID: 7470602929997290251, guid: 96792ec8e5e9bb140b337acb9840701f, type: 3}
     buffedCooldown: 0
     buffedDamage: 0
     isCritical: 0

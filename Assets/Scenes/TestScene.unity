@@ -2487,6 +2487,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3521585435613146379, guid: 5965511ff9630c8458da8e2845eec912, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1616334848}
+    - target: {fileID: 4142695399603489056, guid: 5965511ff9630c8458da8e2845eec912, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1616334848}
     - target: {fileID: 6751531998555098814, guid: 5965511ff9630c8458da8e2845eec912, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2793,6 +2801,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591412908}
   m_CullTransparentMesh: 1
+--- !u!1 &1616334848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3574371556098074603, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
+  m_PrefabInstance: {fileID: 1063063513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1669000228
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,7 +2980,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6216507305410497726, guid: 289466b37a890dd4fa09c307577889fb, type: 3}
   m_PrefabInstance: {fileID: 1063063513}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1616334848}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6c9d12cba6ae834a92ca0dca2eea909, type: 3}
@@ -3329,6 +3342,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RandomItem
       objectReference: {fileID: 0}
+    - target: {fileID: 3925119848531123023, guid: 4dd5466e16248fa4a85cbb137104dee5, type: 3}
+      propertyPath: itemDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925119848531123023, guid: 4dd5466e16248fa4a85cbb137104dee5, type: 3}
+      propertyPath: itemDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e9b84f4c2316d754d80108e65012bc3b, type: 2}
     - target: {fileID: 8434999101190810876, guid: 4dd5466e16248fa4a85cbb137104dee5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -174.22368

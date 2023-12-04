@@ -67,8 +67,6 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         else
         {
-            Debug.Log("Item Dragged Outside of Inventory");
-
             confirmUI.SetActive(true);
         }
         transform.SetParent(InventoryManager.Instance.currentDrag.originalParent);

@@ -6,11 +6,15 @@ using UnityEngine.Events;
 
 public class CharacterStats : MonoBehaviour
 {
-    public CharacterData_SO templateData;
+    [SerializeField] CharacterData_SO templateData;
+
+    [SerializeField] AttackData_SO tempAttackData;
 
     public CharacterData_SO characterData;
 
     public AttackData_SO attackData;
+
+    
 
     public event Action<int, int> UpdateHealthBarOnTop;
 
@@ -24,6 +28,9 @@ public class CharacterStats : MonoBehaviour
     {
         if (templateData != null)
             characterData = Instantiate(templateData);
+
+        if (tempAttackData != null)
+            attackData = Instantiate(tempAttackData);
     }
 
     public int MaxHelath 

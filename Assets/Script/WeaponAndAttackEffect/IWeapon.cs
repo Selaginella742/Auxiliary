@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -31,6 +32,7 @@ public abstract class IWeapon : MonoBehaviour
         else
             handPos = 2;
 
+        damageData.SetPlayerBuff();
         damageData.UpdateData();
     }
     protected virtual void Start()
@@ -134,8 +136,8 @@ public abstract class IWeapon : MonoBehaviour
 public class WeaponData
 {
 
-    [Tooltip("prefab for bullet type weapon, if some weapon need to instantiate a prefab, put it here, otherwise leave it empty")]
-    public GameObject bulletPrefab;
+    [Tooltip("default bullet for bullet type weapon, if some weapon need to instantiate a prefab")]
+    public GameObject defaultBulletPrefab;
     public AudioClip shootSound;
     public GameObject shootEffect;
     public Sprite icon;
@@ -151,14 +153,12 @@ public class WeaponData
     public float bulletSpeed;
     [Min(0.1f)]
     public float existTime;
-
-   
-
-    [Header("Player Buffs Data")]
-    [Tooltip("put player attack data here to calculate the buffed weapon data")]
-    public AttackData_SO playerBuff;
+    
+    AttackData_SO playerBuff;
+    
 
     [Header("Monitoring weapon data")]
+    [ReadOnly] public GameObject bulletPrefab;
     [ReadOnly] public float buffedCooldown;
     [ReadOnly] public int buffedDamage;
     [ReadOnly] public bool isCritical;
@@ -171,12 +171,16 @@ public class WeaponData
      */
     public void UpdateData()
     {
+
         if (playerBuff != null)
         {
             buffedCooldown = playerBuff.coolDown + coolDown;
             buffedDamage = playerBuff.damage + damage;
             buffedCriticalChance = playerBuff.criticalChance + criticalChance;
             buffedCriticalMulti = playerBuff.criticalMultiplier + criticalMultiplier;
+            buffedBulletSpeed = bulletSpeed;
+
+            bulletPrefab = (playerBuff.bulletPrefab != null)? playerBuff.bulletPrefab : defaultBulletPrefab;
         }
         else
         {
@@ -185,6 +189,7 @@ public class WeaponData
             buffedCriticalChance = criticalChance;
             buffedCriticalMulti = criticalMultiplier;
             buffedBulletSpeed = bulletSpeed;
+            bulletPrefab = defaultBulletPrefab;
         }
     }
     /**
@@ -212,5 +217,10 @@ public class WeaponData
             return true;
 
         return false;
+    }
+
+    public void SetPlayerBuff() 
+    {
+        playerBuff = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>().attackData;
     }
 }

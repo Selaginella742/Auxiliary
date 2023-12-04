@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0edb5513298714a4bbe22312bc5f8ab2, type: 3}
-  m_Name: Defen
+  m_Name: Health
   m_EditorClassIdentifier: 
   itemType: 1
   itemName: 
-  itemIcon: {fileID: 21300000, guid: 9713fd8bde2bca348901216914a783ac, type: 3}
+  itemIcon: {fileID: 21300000, guid: eada2e977bad3fd40a350761958081f1, type: 3}
   itemAmount: 1
   stackable: 0
-  description: increase 1 defense
-  itemHealth: 0
-  itemDefence: 1
+  description: increase 20 health
+  itemHealth: 20
+  itemDefence: 0
   itemSpeed: 0
   itemDashCool: 0
   itemDashSpeed: 0
