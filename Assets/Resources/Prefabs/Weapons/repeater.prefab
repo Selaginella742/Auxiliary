@@ -86,7 +86,7 @@ MonoBehaviour:
     icon: {fileID: 21300000, guid: 45f687d8f3ec20d4282b5c9a305c8fd3, type: 3}
     coolDown: 1
     damage: 15
-    criticalMultiplier: 2.06
+    criticalMultiplier: 1.5
     criticalChance: 0
     bulletSpeed: 150
     existTime: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
     buffedCriticalChance: 0
     buffedCriticalMulti: 0
     buffedBulletSpeed: 0
+    buffedExistTime: 0
   bulletAmount: 3
   timeBetweenShot: 0.1
 --- !u!114 &7252285182446571985

@@ -27,6 +27,7 @@ public class Item_Stats_SO : ItemData_SO
         playerData.characterData.currentDefence += itemDefence;
         playerData.characterData.currentSpeed += itemSpeed;
         playerData.characterData.currentDashCool += itemDashCool;
+        playerData.characterData.currentDashSpeed += itemDashSpeed;
 
     }
 
@@ -43,5 +44,6 @@ public class Item_Stats_SO : ItemData_SO
         playerData.characterData.currentDefence -= itemDefence;
         playerData.characterData.currentSpeed -= itemSpeed;
         playerData.characterData.currentDashCool -= itemDashCool;
+        playerData.characterData.currentDashSpeed -= itemDashSpeed;
     }
 }

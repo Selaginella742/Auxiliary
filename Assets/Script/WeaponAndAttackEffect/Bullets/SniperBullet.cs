@@ -9,6 +9,7 @@ public class SniperBullet : IBullet
     [Tooltip("This variable controls the th amount of damage increase in each step")]
     public int damageIncreaseStep;
     [Tooltip("This variable controls the bounce frequency of the bullet")]
+    [Min(0)]
     public int bounce = 1;
 
     /**

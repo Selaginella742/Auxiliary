@@ -26,6 +26,7 @@ public class ShotgunController : IWeapon
             shotData.affectDamage = damageData.CurrentDamage();
             shotData.launchSource = LaunchSource.player;
             shotData.speed = damageData.buffedBulletSpeed;
+            shotData.existTime = damageData.buffedExistTime;
 
             bulletRot = launchStep.MultiplyPoint3x4(bulletRot);
         }

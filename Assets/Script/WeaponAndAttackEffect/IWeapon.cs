@@ -137,22 +137,22 @@ public class WeaponData
 {
 
     [Tooltip("default bullet for bullet type weapon, if some weapon need to instantiate a prefab")]
-    public GameObject defaultBulletPrefab;
+    [SerializeField] GameObject defaultBulletPrefab;
     public AudioClip shootSound;
     public GameObject shootEffect;
     public Sprite icon;
 
     [Header("Damage Variables")]
     [Min(0f)]
-    public float coolDown;
-    public int damage;
-    [Min(1)]
-    public float criticalMultiplier;
+    [SerializeField]float coolDown;
+    [SerializeField] int damage;
+    [Min(1.5f)]
+    [SerializeField] float criticalMultiplier;
     [Range(0,1)]
-    public float criticalChance;
-    public float bulletSpeed;
+    [SerializeField] float criticalChance;
+    [SerializeField] float bulletSpeed;
     [Min(0.1f)]
-    public float existTime;
+    [SerializeField] float existTime;
     
     AttackData_SO playerBuff;
     
@@ -165,6 +165,7 @@ public class WeaponData
     [ReadOnly] public float buffedCriticalChance;
     [ReadOnly] public float buffedCriticalMulti;
     [ReadOnly] public float buffedBulletSpeed;
+    [ReadOnly] public float buffedExistTime;
 
     /**
      * This method update the weapon's damage data after the player get some damage buffs
@@ -179,8 +180,9 @@ public class WeaponData
             buffedCriticalChance = playerBuff.criticalChance + criticalChance;
             buffedCriticalMulti = playerBuff.criticalMultiplier + criticalMultiplier;
             buffedBulletSpeed = bulletSpeed;
+            buffedExistTime = existTime;
 
-            bulletPrefab = (playerBuff.bulletPrefab != null)? playerBuff.bulletPrefab : defaultBulletPrefab;
+            bulletPrefab = (playerBuff.bulletStack.Count != 0)? playerBuff.bulletStack[0] : defaultBulletPrefab;
         }
         else
         {
@@ -189,6 +191,7 @@ public class WeaponData
             buffedCriticalChance = criticalChance;
             buffedCriticalMulti = criticalMultiplier;
             buffedBulletSpeed = bulletSpeed;
+            buffedExistTime = existTime;
             bulletPrefab = defaultBulletPrefab;
         }
     }

@@ -32,7 +32,6 @@ public class ShotgunBullet : IBullet
      * This function calculate the final damage of each shotgun bullet.
      *    - The closer the enemies are to the launch position, the more damage bullet do to them.
      *    - Deal double damage to enemies facing away from the bullet.
-     *    - Each bullet has a percent% chance of damage doubling.
      */
     private int CalculateDamage(Collision coli, int damage) 
     {

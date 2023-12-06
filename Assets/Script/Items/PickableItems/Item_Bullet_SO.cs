@@ -10,17 +10,14 @@ public class Item_Bullet_SO : ItemData_SO
 
     public override void ApplyEffectOnPlayer(CharacterStats playerData)
     {
-        playerData.attackData.bulletPrefab = bullet;
+        playerData.attackData.bulletStack.Insert(0, bullet);
     }
 
     public override void DeleteEffectOnPlayer(CharacterStats playerData)
     {
 
-        if (playerData.attackData.bulletPrefab == bullet)
-        {
-            playerData.attackData.bulletPrefab = null;
-        }
-        
+        playerData.attackData.bulletStack.Remove(bullet);
+
     }
 
 

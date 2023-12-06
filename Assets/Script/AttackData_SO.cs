@@ -19,7 +19,7 @@ public class AttackData_SO : ScriptableObject
     public float shootRange;
 
     [Header("Player Data")]
-    public GameObject bulletPrefab;
+    public List<GameObject> bulletStack = new List<GameObject>();
 
     public virtual int CurrentDamage()
     {

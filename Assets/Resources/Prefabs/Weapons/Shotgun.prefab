@@ -89,7 +89,7 @@ MonoBehaviour:
     criticalMultiplier: 2
     criticalChance: 0.2
     bulletSpeed: 150
-    existTime: 0
+    existTime: 0.3
     bulletPrefab: {fileID: 7470602929997290251, guid: 96792ec8e5e9bb140b337acb9840701f, type: 3}
     buffedCooldown: 0
     buffedDamage: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
     buffedCriticalChance: 0
     buffedCriticalMulti: 0
     buffedBulletSpeed: 0
+    buffedExistTime: 0
   launchAngle: 90
   bulletAmount: 5
 --- !u!114 &5065328906077547001
