@@ -94,6 +94,15 @@ MonoBehaviour:
     lootItems:
     - item: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
       weight: 1
+    - item: {fileID: 8452419530997283076, guid: cf30f6237d3aa714ba3dfb1cb6082382, type: 3}
+      weight: 1
+    - item: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
+      weight: 1
+    - item: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
+      weight: 1
+    - item: {fileID: 24483405991098437, guid: 0b5761871cc0dee4c9ab00546f776ca0, type: 3}
+      weight: 1
+  UITip: {fileID: 0}
 --- !u!114 &4733187592872931032
 MonoBehaviour:
   m_ObjectHideFlags: 0

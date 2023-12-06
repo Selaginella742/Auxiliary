@@ -33,10 +33,6 @@ public class RayController : IWeapon
         {
             if (Input.GetMouseButton(handPos))
             {
-                if (supportAiming != null)//隐藏辅助线
-                {
-                    supportAiming.enabled = false;
-                }
 
                 line.SetActive(true); // 攻击时显示射线
 
@@ -73,11 +69,6 @@ public class RayController : IWeapon
         {
             line.SetActive(false);
             CalculateCooldown(Time.deltaTime); // 不攻击时减少积热槽
-
-            if (supportAiming != null)//显示辅助线
-            {
-                supportAiming.enabled = true;
-            }
         }
     }
 

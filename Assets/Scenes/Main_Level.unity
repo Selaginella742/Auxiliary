@@ -186,9 +186,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[0].item
       value: 
+      objectReference: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[1].item
+      value: 
       objectReference: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[2].item
+      value: 
+      objectReference: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[3].item
+      value: 
+      objectReference: {fileID: 24483405991098437, guid: 0b5761871cc0dee4c9ab00546f776ca0, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[4].item
+      value: 
+      objectReference: {fileID: 8452419530997283076, guid: cf30f6237d3aa714ba3dfb1cb6082382, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16082,9 +16102,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[0].item
       value: 
       objectReference: {fileID: 2419569199664600700, guid: 430f3066b4be51f49ad62fbb3f4102a0, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[5].item
+      value: 
+      objectReference: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[0].weight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[5].weight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20798,7 +20834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[0].item
@@ -20807,22 +20843,30 @@ PrefabInstance:
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[1].item
       value: 
-      objectReference: {fileID: 419795433203356696, guid: 96c7a46ff3dc19b4a804abb9bbcf1616, type: 3}
+      objectReference: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[2].item
       value: 
-      objectReference: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
+      objectReference: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[3].item
+      value: 
+      objectReference: {fileID: 24483405991098437, guid: 0b5761871cc0dee4c9ab00546f776ca0, type: 3}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[0].weight
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[1].weight
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[2].weight
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.data[3].weight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33003,34 +33047,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
-      propertyPath: weaponDropList.lootItems.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
-      propertyPath: weaponDropList.lootItems.Array.data[0].item
-      value: 
-      objectReference: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
-    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
-      propertyPath: weaponDropList.lootItems.Array.data[1].item
-      value: 
-      objectReference: {fileID: 3318015211848941462, guid: e87f2e688421a30439ee53530c4e97fc, type: 3}
-    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
-      propertyPath: weaponDropList.lootItems.Array.data[2].item
-      value: 
-      objectReference: {fileID: 3318015211848941462, guid: 45511453dee11bd4596e4cf17c53baf3, type: 3}
-    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
-      propertyPath: weaponDropList.lootItems.Array.data[0].weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
-      propertyPath: weaponDropList.lootItems.Array.data[1].weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
-      propertyPath: weaponDropList.lootItems.Array.data[2].weight
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35315,6 +35331,10 @@ PrefabInstance:
     - target: {fileID: 1345472281742655184, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
+      propertyPath: weaponDropList.lootItems.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4838672719078711158, guid: b23ece7e874632c47a2a9caad7a1d92f, type: 3}
       propertyPath: weaponDropList.lootItems.Array.data[0].item
