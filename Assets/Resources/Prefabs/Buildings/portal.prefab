@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061a5ae5dc551d145a60743085be6800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: TestScene
+  nextLevel: level2
   playerdataName: level1player
   inventorydataName: level1inventory
+  attackdataName: level1attack
