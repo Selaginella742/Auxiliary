@@ -220,13 +220,13 @@ public class EnemyController : MonoBehaviour
         transform.LookAt(attackTarget.transform);
         if (TargetInAttackRange())
         {
-            agent.isStopped = true;
+            //agent.isStopped = true;
             anim.SetTrigger("Attack");
         }
         if (TargetInShootRange())
         {
             Shoot();
-            agent.isStopped = true;
+            //agent.isStopped = true;
             //anim.SetTrigger("Shoot");//Éä»÷¶¯»­
         }
     }

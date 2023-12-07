@@ -304,11 +304,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.03
-  m_Speed: 30
-  m_Acceleration: 8
+  m_Speed: 20
+  m_Acceleration: 30
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_AngularSpeed: 500
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templateData: {fileID: 11400000, guid: e9ea3117dc562904592411554f811cbb, type: 2}
+  tempAttackData: {fileID: 0}
   characterData: {fileID: 0}
   attackData: {fileID: 11400000, guid: 0a8acf86789343644bef9720cbaa68ef, type: 2}
   isCritical: 0
@@ -392,8 +393,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.10244509, y: 0.077859215, z: 0.023413273}
-  m_Center: {x: 0.00045513903, y: 0.11665401, z: -0.0069530755}
+  m_Size: {x: 0.103399515, y: 0.114471056, z: 0.023413273}
+  m_Center: {x: -0.000022077258, y: 0.10495999, z: -0.0069530755}
 --- !u!114 &6656667280201934868
 MonoBehaviour:
   m_ObjectHideFlags: 0

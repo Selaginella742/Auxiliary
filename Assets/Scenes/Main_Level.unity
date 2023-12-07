@@ -12083,6 +12083,10 @@ PrefabInstance:
       propertyPath: lootItems.Array.data[0].weight
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 5336381086307613520, guid: 3468c2c284afaa84ba74fe40dd9aa8bd, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6015842261186908524, guid: 3468c2c284afaa84ba74fe40dd9aa8bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 282.1
