@@ -15,19 +15,14 @@ public class ShowingInfoState : IState
 
     public void OnEnter()
     {
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<PlayerRotation>().enabled = false;
-
-        player.GetComponent<CharacterStats>().characterData.leftWeapon.enabled = false;
-        player.GetComponent<CharacterStats>().characterData.rightWeapon.enabled = false;
+        Time.timeScale = 0.0f;
         Cursor.visible = true;
 
     }
 
     public void OnExit()
     {
-        player.GetComponent<CharacterStats>().characterData.leftWeapon.enabled = true;
-        player.GetComponent<CharacterStats>().characterData.rightWeapon.enabled = true;
+        Time.timeScale = 1.0f;
 
         Cursor.visible = false;
     }

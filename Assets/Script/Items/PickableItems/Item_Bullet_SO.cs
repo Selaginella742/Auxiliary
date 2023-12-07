@@ -10,8 +10,8 @@ public class Item_Bullet_SO : ItemData_SO
 
     public override void ApplyEffectOnPlayer(CharacterStats playerData)
     {
-        if (!playerData.attackData.bulletStack.Contains(bullet))
-            playerData.attackData.bulletStack.Insert(0, bullet);
+
+         playerData.attackData.bulletStack.Insert(0, bullet);
     }
 
     public override void DeleteEffectOnPlayer(CharacterStats playerData)

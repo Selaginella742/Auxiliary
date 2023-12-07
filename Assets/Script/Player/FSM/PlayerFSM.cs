@@ -44,10 +44,13 @@ public class PlayerFSM : MonoBehaviour
 
     public void SwitchState(StateType switchState) 
     {
-        currentState.OnExit();
-        currentState = stateList[switchState];
-        currentStateType = switchState;
-        currentState.OnEnter();
+        if (switchState != currentStateType)
+        {
+            currentState.OnExit();
+            currentState = stateList[switchState];
+            currentStateType = switchState;
+            currentState.OnEnter();
+        }
     }
 
     public StateType GetCurrentState() 
