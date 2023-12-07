@@ -12,7 +12,7 @@ public class ItemToolTip : MonoBehaviour
     public void SetupTooltip(ItemData_SO item)
     {
         itemName.text = item.itemName;
-        itemAmount.text = item.itemAmount.ToString();
+        //itemAmount.text = item.itemAmount.ToString();
         itemDescription.text = item.description;
     }
 }
