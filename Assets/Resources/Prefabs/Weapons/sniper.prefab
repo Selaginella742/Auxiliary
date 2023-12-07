@@ -52,7 +52,7 @@ MonoBehaviour:
     shootEffect: {fileID: 6415271522330289220, guid: b57a891dc403a7644a444a33a4ff7181, type: 3}
     icon: {fileID: 21300000, guid: d735365d61af9c74fa6c7cff226bd684, type: 3}
     coolDown: 1.5
-    damage: 25
+    damage: 60
     criticalMultiplier: 2.57
     criticalChance: 0
     bulletSpeed: 200

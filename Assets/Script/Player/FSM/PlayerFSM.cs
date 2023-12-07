@@ -33,7 +33,7 @@ public class PlayerFSM : MonoBehaviour
         currentState = stateList[startStateType];
         currentStateType = startStateType;
 
-        Cursor.visible = false;
+        //Cursor.visible = false;
         currentState.OnEnter();
     }
 

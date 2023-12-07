@@ -10,9 +10,14 @@ public class Hurtbox : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         CharacterStats target = other.gameObject.GetComponent<CharacterStats>();
-        if (target != null)
+        if (target != null&&other.CompareTag("Player"))
         {
             target.TakeDamage(damage, target);
+        }
+
+        else if (target !=null&&other.CompareTag("Enemy"))
+        {
+            target.TakeDamage(damage * 10, target);
         }
     }
     

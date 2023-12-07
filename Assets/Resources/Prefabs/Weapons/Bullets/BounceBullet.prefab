@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 42fd984aadf1e9543b3a65456c149f0f, type: 2}
+  - {fileID: 2100000, guid: e9acf8a297b573d498722c8df37f5d96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -216,19 +216,19 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.87771446, b: 0, a: 1}
-      key1: {r: 1, g: 0.7621552, b: 0.24742197, a: 1}
-      key2: {r: 1, g: 0.75921196, b: 0.24525173, a: 1}
-      key3: {r: 1, g: 0.7764151, b: 0.2783019, a: 0}
-      key4: {r: 1, g: 0.7822593, b: 0.262246, a: 0}
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 0, g: 0, b: 0, a: 1}
+      key2: {r: 1, g: 0.42660633, b: 0, a: 1}
+      key3: {r: 1, g: 0.42660633, b: 0, a: 0}
+      key4: {r: 1, g: 0.42660633, b: 0, a: 0}
       key5: {r: 1, g: 0.42660633, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 10409
-      ctime2: 16962
-      ctime3: 20046
-      ctime4: 27563
+      ctime1: 44333
+      ctime2: 44333
+      ctime3: 44333
+      ctime4: 44333
       ctime5: 44333
       ctime6: 0
       ctime7: 0
@@ -242,7 +242,7 @@ TrailRenderer:
       atime7: 0
       m_Mode: 0
       m_ColorSpace: 0
-      m_NumColorKeys: 6
+      m_NumColorKeys: 2
       m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
@@ -311,7 +311,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1583871549889961133
 Rigidbody:

@@ -16,7 +16,7 @@ public class ShowingInfoState : IState
     public void OnEnter()
     {
         Time.timeScale = 0.0f;
-        Cursor.visible = true;
+        //Cursor.visible = true;
 
     }
 
@@ -24,7 +24,7 @@ public class ShowingInfoState : IState
     {
         Time.timeScale = 1.0f;
 
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     public void OnUpdate()
