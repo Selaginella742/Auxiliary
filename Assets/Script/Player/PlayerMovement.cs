@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     CharacterData_SO playerData;
 
     float currentCool;
-    //private Animator anim;
     private void Start()
     {
         playerData = this.gameObject.GetComponent<CharacterStats>().characterData;
@@ -33,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
 
     void PlayerMovementTranslate(float speed) 
     {
@@ -76,13 +74,20 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<CharacterController>().Move(isoDir * speed * Time.deltaTime);
     }
 
+
+    /**
+     * The method for the player to perform the dash
+     * (it will increase a large amount of player's current speed in 0.1 second)
+     */
     IEnumerator performDash() 
     {
-        playerData.currentSpeed += playerData.currentDashSpeed;
+        var dashSpeed = playerData.currentDashSpeed;
+
+        playerData.currentSpeed += dashSpeed;
 
         yield return new WaitForSeconds(0.1f);
 
-        playerData.currentSpeed -= playerData.currentDashSpeed;
+        playerData.currentSpeed -= dashSpeed;
         FindObjectOfType<AudioManager>().Play("Dash");
 
     }
