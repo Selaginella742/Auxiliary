@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isExplosion: 1
   explosionEffect: {fileID: 167558, guid: a11dc34cafe3dfd4facb59cfb4e72de8, type: 3}
-  hurtBox: {fileID: 6484041283301605250, guid: bee7ec1231e49354b9705504ba7c7d34, type: 3}
+  hurtBox: {fileID: 6484041283301605250, guid: 21305d820051f5d458380e8ae3bf0f7a, type: 3}
 --- !u!114 &8324607781057657368
 MonoBehaviour:
   m_ObjectHideFlags: 0

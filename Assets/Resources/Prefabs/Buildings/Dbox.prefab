@@ -138,8 +138,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6403392, y: 0.59972155, z: 1.2744108}
-  m_Center: {x: 0.32004324, y: 0.29986495, z: 0.63720685}
+  m_Size: {x: 0.91683686, y: 0.59972155, z: 1.2744111}
+  m_Center: {x: 0.18179435, y: 0.29986495, z: 0.63720685}
 --- !u!114 &8987025569087147154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5705b0a04e9d70a4099af477d31038c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isExplosion: 0
+  explosionEffect: {fileID: 0}
+  hurtBox: {fileID: 0}
 --- !u!114 &5082268551196084308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templateData: {fileID: 11400000, guid: b8b596f7d18b2174f9236d08681e94fb, type: 2}
+  tempAttackData: {fileID: 0}
   characterData: {fileID: 0}
   attackData: {fileID: 0}
   isCritical: 0
