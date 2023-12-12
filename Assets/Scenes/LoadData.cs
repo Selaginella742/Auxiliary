@@ -27,6 +27,7 @@ public class LoadData : MonoBehaviour
         Load(inventoryData, inventorydataName);
         Load(attackData, attackdataName);
         GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().inventoryUI.RefreshUI();
+        GameObject.Find("BulletType").GetComponent<BulletType>().DetectBulletType();
         Destroy(gameObject);
     }
 }

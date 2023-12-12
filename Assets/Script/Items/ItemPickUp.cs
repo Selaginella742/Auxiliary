@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-
     public ItemData_SO[] itemDatas;
     private ItemData_SO itemData;
 
@@ -23,5 +22,8 @@ public class ItemPickUp : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("ItemPickUp");
 
         }
+
+        GameObject.Find("BulletType").GetComponent<BulletType>().DetectBulletType();
+
     }
 }
