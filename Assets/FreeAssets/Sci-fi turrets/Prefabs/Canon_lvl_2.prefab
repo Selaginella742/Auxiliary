@@ -30,7 +30,9 @@ Transform:
   m_LocalPosition: {x: 0.002292919, y: 0.2916035, z: -0.025281677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 661353255228034138}
+  - {fileID: 4146375954552480048}
   m_Father: {fileID: 4000012307128758}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &33000010333661300
@@ -179,6 +181,7 @@ GameObject:
   - component: {fileID: 33000012798234764}
   - component: {fileID: 23000011206435812}
   - component: {fileID: 1963005259757154933}
+  - component: {fileID: 5820369311896987573}
   m_Layer: 0
   m_Name: Canon_lvl_2
   m_TagString: Untagged
@@ -261,10 +264,93 @@ Animation:
   m_GameObject: {fileID: 1000013227101710}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: b5efa72512cd525428b8917c927d740b, type: 2}
   m_Animations:
+  - {fileID: 0}
   - {fileID: 7400000, guid: b5efa72512cd525428b8917c927d740b, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &5820369311896987573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013227101710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2c78fec317548742b67571e7ad23adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interval: 0.5
+  damage: 10
+  pointOne: {fileID: 4080335291913974443}
+  pointTwo: {fileID: 2184408298921072925}
+  gunModel: {fileID: 1000010532171060}
+  shootEffect: {fileID: 100004, guid: 510e0a736e5e66243b242a076c59611a, type: 3}
+  bulletPrefab: {fileID: 7470602929997290251, guid: 902f2e6935aeed04da9ce936c06a10bb, type: 3}
+  bulletPrefab1: {fileID: 7470602929997290251, guid: a644b81bb39da934991e8ad6ce67389f, type: 3}
+--- !u!1 &2184408298921072925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4146375954552480048}
+  m_Layer: 0
+  m_Name: bulletpoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4146375954552480048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2184408298921072925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.068, z: 0.725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4000012415272414}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4080335291913974443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 661353255228034138}
+  m_Layer: 0
+  m_Name: bulletpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &661353255228034138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4080335291913974443}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.047, z: 0.725}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4000012415272414}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
