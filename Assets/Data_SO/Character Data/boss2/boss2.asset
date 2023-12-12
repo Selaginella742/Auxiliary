@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11e855c40985ef44d83dbf4767300503, type: 3}
-  m_Name: bosstest
+  m_Name: boss2
   m_EditorClassIdentifier: 
-  maxHealth: 1000
-  baseDefence: 3
+  maxHealth: 2500
+  baseDefence: 5
   baseSpeed: 0
   baseDashCool: 0
   dashSpeed: 0
   iniLeft: 0
   iniRight: 0
-  currentHealth: 1000
+  currentHealth: 0
   currentDefence: 0
   currentSpeed: 0
   currentDashCool: 0
