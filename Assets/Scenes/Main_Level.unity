@@ -9133,6 +9133,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1099491326}
   m_SourcePrefab: {fileID: 100100000, guid: cf8443763fc34314490f8a3e2f94dd37, type: 3}
+--- !u!1 &488769738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8813116164501977880, guid: a0c4b44916c937a489b467e3556070a2, type: 3}
+  m_PrefabInstance: {fileID: 2184812767158211898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &494034978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19607,10 +19612,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Prefab
       objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: cfef738579cd02c40b3b1d63e67b0f84, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cfef738579cd02c40b3b1d63e67b0f84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.907272
@@ -19651,6 +19652,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 900258930504926232, guid: cfef738579cd02c40b3b1d63e67b0f84, type: 3}
+      propertyPath: loadingText
+      value: 
+      objectReference: {fileID: 488769738}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

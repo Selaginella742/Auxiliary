@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+    public GameObject loadingText;
     public string nextLevel;
     public string playerdataName;
     public string inventorydataName;
@@ -29,12 +30,17 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
+
         if (isused == false)
         {
             isused = true;
             Invoke("LoadNextScene", 1.5f);
             animation.Play("open");
         }
+
+        loadingText.SetActive(true);
+
     }
 
     private void LoadNextScene()
