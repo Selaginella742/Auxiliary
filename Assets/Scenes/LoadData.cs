@@ -20,14 +20,17 @@ public class LoadData : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        playerData = GameObject.Find("Player").GetComponent<CharacterStats>().characterData;
-        inventoryData = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().inventoryData;
-        attackData = GameObject.Find("Player").GetComponent<CharacterStats>().attackData;
-        Load(playerData, playerdataName);
-        Load(inventoryData, inventorydataName);
-        Load(attackData, attackdataName);
-        GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().inventoryUI.RefreshUI();
-        GameObject.Find("BulletType").GetComponent<BulletType>().DetectBulletType();
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            playerData = GameObject.Find("Player").GetComponent<CharacterStats>().characterData;
+            inventoryData = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().inventoryData;
+            attackData = GameObject.Find("Player").GetComponent<CharacterStats>().attackData;
+            Load(playerData, playerdataName);
+            Load(inventoryData, inventorydataName);
+            Load(attackData, attackdataName);
+            GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>().inventoryUI.RefreshUI();
+            GameObject.Find("BulletType").GetComponent<BulletType>().DetectBulletType();
+            Destroy(gameObject);
+        }
     }
 }
