@@ -355,6 +355,7 @@ MonoBehaviour:
   speed: 30
   existTime: 2
   bulletEffect: {fileID: 1354300928873264297, guid: 54084422ef9e9cf4badaaca7a8a35e2f, type: 3}
+  icon: {fileID: 21300000, guid: 1ca9475d1163c8b48ad273adaf278911, type: 3}
   hitEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   launchSource: 0
   affectDamage: 0

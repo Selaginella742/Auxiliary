@@ -23,5 +23,5 @@ MonoBehaviour:
     will bounce when hit)
 
     increase 1 damage'
-  damageIncrease: 1
   bullet: {fileID: 7470602929997290251, guid: 5d7fcfb048c4cb5499951b7cbb38385e, type: 3}
+  damageIncrease: 3

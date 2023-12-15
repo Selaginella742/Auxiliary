@@ -10,6 +10,8 @@ public abstract class IBullet : MonoBehaviour
     public float speed = 30;
     public float existTime = 5;
     public GameObject bulletEffect;
+    [Tooltip("This variable controls the displayed icon of the player's current bullet")]
+    [SerializeField] public Sprite icon;
     private GameObject bulletSound;
     public GameObject hitEffect;
     private GameObject hitIns;

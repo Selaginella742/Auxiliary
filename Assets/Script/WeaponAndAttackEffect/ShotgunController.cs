@@ -16,6 +16,7 @@ public class ShotgunController : IWeapon
         //calculate the angle matrix for changing each bullet's direction
         var launchStep = Matrix4x4.Rotate(Quaternion.Euler(0, launchAngle / bulletAmount, 0));
 
+        MuzzleFlash();
 
         for (int i = 0; i < bulletAmount; i++)
         {

@@ -5,9 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Bullet Effect Item", menuName = "Item/Bullet Effect Item")]
 public class Item_Bullet_SO : ItemData_SO
 {
-    public int damageIncrease;
     [Header("bullet to be changed")]
     [SerializeField]GameObject bullet;
+
+    [Header("Repeat Pickup increasement")]
+    [SerializeField] int damageIncrease;
 
     public override void ApplyEffectOnPlayer(CharacterStats playerData)
     {

@@ -19,5 +19,5 @@ MonoBehaviour:
   stackable: 0
   description: "Change current weapon's bullet into back-stab bullet \n(bullet will
     deal double damage when hitting the back of the enemy)\nincrease 1 damage"
-  damageIncrease: 1
   bullet: {fileID: 7470602929997290251, guid: 96792ec8e5e9bb140b337acb9840701f, type: 3}
+  damageIncrease: 3

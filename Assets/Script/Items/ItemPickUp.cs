@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class ItemPickUp : MonoBehaviour
 {
@@ -21,9 +23,21 @@ public class ItemPickUp : MonoBehaviour
             Destroy(gameObject);
             FindObjectOfType<AudioManager>().Play("ItemPickUp");
 
+            GameObject itemDisplay = GameObject.Find("Tutorial");
+            if (itemDisplay != null)
+            {
+                itemDisplay.GetComponentInChildren<Text>().text = itemData.itemName + " picked";
+                itemDisplay.GetComponent<PlayableDirector>().Play();
+            }   
+
         }
 
-        GameObject.Find("BulletType").GetComponent<BulletType>().DetectBulletType();
+        BulletType typeDisplay;
+        GameObject.Find("BulletType").TryGetComponent<BulletType>(out typeDisplay);
+        if (typeDisplay != null)
+        {
+            typeDisplay.DetectBulletType();
+        }
 
     }
 }

@@ -19,5 +19,5 @@ MonoBehaviour:
   stackable: 0
   description: "change current weapon's bullet into penetrative bullet\n(bullet will
     penetrate enemies) \nincrease 1 damage"
-  damageIncrease: 1
   bullet: {fileID: 7470602929997290251, guid: a644b81bb39da934991e8ad6ce67389f, type: 3}
+  damageIncrease: 3
