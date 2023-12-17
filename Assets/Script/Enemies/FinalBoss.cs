@@ -28,7 +28,7 @@ public class FinalBoss : MonoBehaviour
 
     private void FinalBossMovement()
     {
-        if (transform.position.z >= -340)
+        if (transform.position.z >= -345)
         {
             Vector3 newPosition = transform.position;
             newPosition.z -= currentSpeed;
