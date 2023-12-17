@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: boss2
   m_EditorClassIdentifier: 
   maxHealth: 2500
-  baseDefence: 5
+  baseDefence: 2
   baseSpeed: 0
   baseDashCool: 0
   dashSpeed: 0

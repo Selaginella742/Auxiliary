@@ -1104,6 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a04fea0e8e86754a9b7b00ee7595a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.1
   fallingE: {fileID: 1172774473157712965, guid: a3834ca61de576143b896d781dd3b040, type: 3}
   attackInterval: 3
 --- !u!65 &547842423

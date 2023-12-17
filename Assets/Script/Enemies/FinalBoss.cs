@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FinalBoss : MonoBehaviour
 {
+    public float speed;
+    private float currentSpeed;
     public GameObject fallingE;
     private Animation animation;
     public float attackInterval;
@@ -21,6 +23,7 @@ public class FinalBoss : MonoBehaviour
     {
         FinalBossMovement();
         ShootFalling();
+        DetectSpeed();
     }
 
     private void FinalBossMovement()
@@ -28,7 +31,7 @@ public class FinalBoss : MonoBehaviour
         if (transform.position.z >= -340)
         {
             Vector3 newPosition = transform.position;
-            newPosition.z -= 0.5f;
+            newPosition.z -= currentSpeed;
             transform.position = newPosition;
         }
     }
@@ -43,6 +46,19 @@ public class FinalBoss : MonoBehaviour
             animation.Play();
             Instantiate(fallingE, fallingEP, transform.rotation);
             currentInterval = attackInterval;
+        }
+    }
+
+    private void DetectSpeed()
+    {
+        if (Mathf.Abs(transform.position.z - GameObject.FindGameObjectWithTag("Player").transform.position.z) >= 80)
+        {
+            currentSpeed = speed * 5.0f;
+        }
+
+        else
+        {
+            currentSpeed = speed;
         }
     }
 
