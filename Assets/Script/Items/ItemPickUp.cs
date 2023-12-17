@@ -26,8 +26,11 @@ public class ItemPickUp : MonoBehaviour
             GameObject itemDisplay = GameObject.Find("Tutorial");
             if (itemDisplay != null)
             {
+                var anim = itemDisplay.GetComponent<PlayableDirector>();
+
+                anim.Stop();
                 itemDisplay.GetComponentInChildren<Text>().text = itemData.itemName + " picked";
-                itemDisplay.GetComponent<PlayableDirector>().Play();
+                anim.Play();
             }   
 
         }

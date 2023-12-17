@@ -18,6 +18,9 @@ public class ShotgunController : IWeapon
 
         MuzzleFlash();
 
+        if (damageData.shootSound != null)
+            AudioSource.PlayClipAtPoint(damageData.shootSound, Camera.main.transform.position, 0.5f);
+
         for (int i = 0; i < bulletAmount; i++)
         {
             GameObject shot = Instantiate(damageData.bulletPrefab, transform.position, Quaternion.LookRotation(bulletRot));
