@@ -15,7 +15,7 @@ public class FireArea : MonoBehaviour
             interval -= Time.deltaTime;
             if (interval <= 0) 
             {
-                CharacterStats target = other.gameObject.GetComponent<CharacterStats>();
+                CharacterStats target = other.GetComponent<CharacterStats>();
                 target.TakeDamage(damage, target); 
                 interval = 1.0f;
             }
