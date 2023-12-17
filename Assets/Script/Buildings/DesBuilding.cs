@@ -30,7 +30,7 @@ public class DesBuilding : MonoBehaviour
         if (characterStats.characterData.currentHealth <= 0)
         {
             FindObjectOfType<AudioManager>().Play("EnemyDeath");
-            Destroy(gameObject);
+            Destroy(gameObject, 0.2f);
             if (isExplosion && !isBoom)
             {
                 isBoom = true;

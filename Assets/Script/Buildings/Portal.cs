@@ -30,16 +30,20 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
-
-        if (isused == false)
+        if (other.CompareTag("Player"))
         {
-            isused = true;
-            Invoke("LoadNextScene", 1.5f);
-            animation.Play("open");
-        }
 
-        loadingText.SetActive(true);
+            GameObject.Find("Player").GetComponent<PlayerMovement>().enabled = false;
+
+            if (isused == false)
+            {
+                isused = true;
+                Invoke("LoadNextScene", 1.5f);
+                animation.Play("open");
+            }
+
+            loadingText.SetActive(true);
+        }
 
     }
 
