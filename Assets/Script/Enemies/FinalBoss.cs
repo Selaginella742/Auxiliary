@@ -28,7 +28,7 @@ public class FinalBoss : MonoBehaviour
         if (transform.position.z >= -340)
         {
             Vector3 newPosition = transform.position;
-            newPosition.z -= 0.1f;
+            newPosition.z -= 0.5f;
             transform.position = newPosition;
         }
     }
