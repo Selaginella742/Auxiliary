@@ -17,11 +17,6 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 1ca9475d1163c8b48ad273adaf278911, type: 3}
   itemAmount: 1
   stackable: 0
-  description: 'change current weapon''s bullet into bounce bullet
-
-    (the bullet
-    will bounce when hit)
-
-    increase 1 damage'
+  description: "Changes the bullet to bounce off of walls\r"
   bullet: {fileID: 7470602929997290251, guid: 5d7fcfb048c4cb5499951b7cbb38385e, type: 3}
-  damageIncrease: 3
+  damageIncrease: 2

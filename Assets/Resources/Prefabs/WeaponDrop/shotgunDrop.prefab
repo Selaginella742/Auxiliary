@@ -49,8 +49,8 @@ MonoBehaviour:
   weaponName: Shotgun
   weaponIndex: 3
   weaponIcon: {fileID: 0}
-  description: A standard shotgun that fits most mechs. While holding CTRL, press
-    left/right mouse button to equip
+  description: A shotgun powerful enough to blow doors off their hinges. While holding
+    CTRL, press left/right mouse button to equip.
 --- !u!65 &8540142283009326338
 BoxCollider:
   m_ObjectHideFlags: 0

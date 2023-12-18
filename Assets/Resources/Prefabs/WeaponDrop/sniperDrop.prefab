@@ -49,8 +49,8 @@ MonoBehaviour:
   weaponName: Sniper
   weaponIndex: 1
   weaponIcon: {fileID: 0}
-  description: A standard sniper that fits most mechs. While holding CTRL, press
-    left/right mouse button to equip
+  description: A sniper that can put a hole in any mech. While holding CTRL, press
+    left/right mouse button to equip.
 --- !u!65 &8540142283009326338
 BoxCollider:
   m_ObjectHideFlags: 0

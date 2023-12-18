@@ -49,7 +49,8 @@ MonoBehaviour:
   weaponName: Laser Rifle
   weaponIndex: 4
   weaponIcon: {fileID: 0}
-  description: 
+  description: A laser rifle capable of liquifying metal. While holding CTRL, press
+    left/right mouse button to equip.
 --- !u!65 &5547649799913486632
 BoxCollider:
   m_ObjectHideFlags: 0
