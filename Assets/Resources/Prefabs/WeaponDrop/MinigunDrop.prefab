@@ -49,7 +49,10 @@ MonoBehaviour:
   weaponName: Minigun
   weaponIndex: 5
   weaponIcon: {fileID: 0}
-  description: 
+  description: 'A minigun that shreds through even the thickest armor. While holding
+    CTRL, press left/right mouse button to equip.
+
+'
 --- !u!65 &378231172485798430
 BoxCollider:
   m_ObjectHideFlags: 0
