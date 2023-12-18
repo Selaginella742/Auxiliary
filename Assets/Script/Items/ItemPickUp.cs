@@ -29,7 +29,7 @@ public class ItemPickUp : MonoBehaviour
                 var anim = itemDisplay.GetComponent<PlayableDirector>();
 
                 anim.Stop();
-                itemDisplay.GetComponentInChildren<Text>().text = itemData.itemName + " picked";
+                itemDisplay.GetComponentInChildren<Text>().text = itemData.itemName + " picked \n" + itemData.description;
                 anim.Play();
             }   
 
